@@ -1,117 +1,94 @@
 package TTS;
 
+import java.util.ArrayList;
+
 /**
- * Main entry point for Train Ticket Booking System
- * Demonstrates the system functionality
+ * Main class - Presentation layer
+ * MAJOR IMPROVEMENT: Only uses service layer and repositories
+ * Does NOT directly create or manipulate entities
+ * This is proper layered architecture!
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("╔══════════════════════════════════════════════╗");
-        System.out.println("║   TRAIN TICKET BOOKING SYSTEM - DEMO        ║");
-        System.out.println("╚══════════════════════════════════════════════╝\n");
+        System.out.println("=== Train Ticket Booking System (SECOND - Refactored) ===\n");
 
-        // Get system instance
-        TicketBookingSystem system = TicketBookingSystem.getInstance();
+        // Initialize repositories
+        TrainStationRepository stationRepo = new TrainStationRepository();
+        TrainRepository trainRepo = new TrainRepository();
+        RouteRepository routeRepo = new RouteRepository();
+        PassengerRepository passengerRepo = new PassengerRepository();
+        TicketRepository ticketRepo = new TicketRepository();
 
-        // Create stations
-        TrainStation newyork = new TrainStation("NYC", "New York Penn Station", "New York");
-        TrainStation boston = new TrainStation("BOS", "Boston South Station", "Boston");
-        TrainStation philly = new TrainStation("PHL", "Philadelphia 30th Street", "Philadelphia");
+        // Initialize service
+        BookingService bookingService = new BookingService(trainRepo, routeRepo,
+                                                           ticketRepo, passengerRepo, stationRepo);
 
-        system.addStation(newyork);
-        system.addStation(boston);
-        system.addStation(philly);
+        // Create stations (via repository)
+        TrainStation nycStation = new TrainStation("NYC-001", "Penn Station", "New York", "NY");
+        TrainStation bostonStation = new TrainStation("BOS-001", "South Station", "Boston", "MA");
+        stationRepo.addStation(nycStation);
+        stationRepo.addStation(bostonStation);
 
-        // Create routes
-        Route route1 = new Route("R001", newyork, boston, 215.0);
-        route1.addIntermediateStop(philly);
-        Route route2 = new Route("R002", newyork, philly, 95.0);
+        // Create routes (uses station IDs, not objects!)
+        Route route1 = new Route("R-001", "NYC-001", "BOS-001", 350.0, 89.99);
+        routeRepo.addRoute(route1);
 
-        system.addRoute(route1);
-        system.addRoute(route2);
-
-        // Create trains
-        Train acela = new Train("TR001", "Acela Express", 300, "Express");
-        acela.setRoute(route1);
-        Train northeast = new Train("TR002", "Northeast Regional", 400, "Regional");
-        northeast.setRoute(route2);
-
-        system.addTrain(acela);
-        system.addTrain(northeast);
-
-        newyork.addTrain(acela);
-        newyork.addTrain(northeast);
-
-        // Create staff
-        TicketAgent agent1 = new TicketAgent("John Smith", "EMP001",
-                "john@railway.com", "555-0100", "AGT001", 45000.0);
-        agent1.setAssignedStation(newyork);
-
-        StationManager manager1 = new StationManager("Mary Johnson", "EMP002",
-                "mary@railway.com", "555-0200", "MGR001", 75000.0);
-        manager1.setManagedStation(newyork);
-        manager1.addTrainSchedule(acela);
-        manager1.addTrainSchedule(northeast);
-
-        newyork.addAgent(agent1);
-        system.addStaff(agent1);
-        system.addStaff(manager1);
+        // Create trains (uses route IDs, not objects!)
+        Train train1 = new Train("T-001", "Northeast Express", "R-001", 200, "08:00", "12:30");
+        Train train2 = new Train("T-002", "Boston Flyer", "R-001", 150, "14:00", "18:30");
+        trainRepo.addTrain(train1);
+        trainRepo.addTrain(train2);
 
         // Create passengers
-        Passenger passenger1 = new Passenger("Alice Brown", "P001",
-                "alice@email.com", "555-1000", "P123456");
-        Passenger passenger2 = new Passenger("Bob Wilson", "P002",
-                "bob@email.com", "555-2000", "P789012");
+        Passenger passenger1 = new Passenger("John Doe", "P-001", "john@email.com", "555-1234");
+        Passenger passenger2 = new Passenger("Jane Smith", "P-002", "jane@email.com", "555-5678");
+        passengerRepo.addPassenger(passenger1);
+        passengerRepo.addPassenger(passenger2);
 
-        system.registerPassenger(passenger1);
-        system.registerPassenger(passenger2);
+        System.out.println("--- Initial System State ---");
+        System.out.println("Stations: " + stationRepo.getAllStations().size());
+        System.out.println("Routes: " + routeRepo.getAllRoutes().size());
+        System.out.println("Trains: " + trainRepo.getAllTrains().size());
+        System.out.println("Passengers: " + passengerRepo.getAllPassengers().size());
+        System.out.println();
 
-        // Display initial system state
-        system.displaySystemStats();
+        // Book tickets through service
+        System.out.println("--- Booking Tickets ---");
+        Ticket ticket1 = bookingService.bookTicket("P-001", "T-001", "2025-12-20");
+        if (ticket1 != null) {
+            System.out.println("✓ Booked: " + ticket1.getTicketId());
+            ticket1.displayInfo();
+            System.out.println();
+        }
 
-        System.out.println("\n═══════ DEMONSTRATION ═══════\n");
+        Ticket ticket2 = bookingService.bookTicket("P-002", "T-002", "2025-12-21");
+        if (ticket2 != null) {
+            System.out.println("✓ Booked: " + ticket2.getTicketId());
+            ticket2.displayInfo();
+            System.out.println();
+        }
 
-        // Demo: Search for trains
-        System.out.println("1. Searching for trains from NYC to Boston...");
-        var availableTrains = system.searchAvailableTrains(newyork, boston);
-        for (Train t : availableTrains) {
+        // Search trains through service
+        System.out.println("--- Searching Trains on Route R-001 ---");
+        ArrayList<Train> trainsOnRoute = bookingService.searchTrains("R-001");
+        System.out.println("Found " + trainsOnRoute.size() + " trains:");
+        for (Train t : trainsOnRoute) {
             t.displayInfo();
             System.out.println();
         }
 
-        // Demo: Book tickets
-        System.out.println("\n2. Booking tickets for Alice...");
-        Ticket ticket1 = agent1.issueTicket(passenger1, route1, acela, "A1", route1.getBaseFare());
-        ticket1.displayTicket();
+        // View passenger tickets through service
+        System.out.println("--- Passenger Bookings ---");
+        ArrayList<Ticket> p1Tickets = bookingService.getPassengerTickets("P-001");
+        System.out.println("Passenger P-001 has " + p1Tickets.size() + " ticket(s)");
 
-        System.out.println("\n3. Booking tickets for Bob...");
-        Ticket ticket2 = agent1.issueTicket(passenger2, route2, northeast, "B5", route2.getBaseFare());
-        ticket2.displayTicket();
+        // Cancel ticket through service
+        System.out.println("\n--- Cancelling Ticket ---");
+        if (ticket1 != null && bookingService.cancelTicket(ticket1.getTicketId())) {
+            System.out.println("✓ Cancelled: " + ticket1.getTicketId());
+            ticket1.displayInfo();
+        }
 
-        // Display passenger info
-        System.out.println("\n4. Passenger Information:");
-        passenger1.displayInfo();
-        System.out.println();
-        passenger2.displayInfo();
-
-        // Display staff performance
-        System.out.println("\n5. Staff Performance:");
-        agent1.displayInfo();
-        System.out.println();
-        manager1.displayInfo();
-
-        // Demo: Cancel a ticket
-        System.out.println("\n6. Cancelling Bob's ticket...");
-        agent1.cancelTicket(passenger2, ticket2);
-        ticket2.displayTicket();
-
-        // Final system stats
-        System.out.println("\n7. Final System State:");
-        system.displaySystemStats();
-        acela.displayInfo();
-
-        System.out.println("\n╔══════════════════════════════════════════════╗");
-        System.out.println("║          DEMO COMPLETE                       ║");
-        System.out.println("╚══════════════════════════════════════════════╝");
+        System.out.println("\n=== Demo Complete ===");
     }
 }

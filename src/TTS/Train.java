@@ -1,72 +1,55 @@
 package TTS;
 
-import java.util.ArrayList;
-
 /**
- * Represents a train with routes and seats
+ * Train entity
+ * MAJOR IMPROVEMENT: Uses route ID instead of Route object
+ * This breaks the cyclic dependency!
  */
 public class Train {
-    private String trainNumber;
+    private String trainId;
     private String trainName;
+    private String routeId;  // CHANGED: Was Route object
     private int totalSeats;
-    private ArrayList<String> bookedSeats;
-    private Route route;
-    private String type; // Express, Local, etc.
+    private int availableSeats;
+    private String departureTime;
+    private String arrivalTime;
 
-    public Train(String trainNumber, String trainName, int totalSeats, String type) {
-        this.trainNumber = trainNumber;
+    public Train(String trainId, String trainName, String routeId, int totalSeats, String departureTime, String arrivalTime) {
+        this.trainId = trainId;
         this.trainName = trainName;
+        this.routeId = routeId;
         this.totalSeats = totalSeats;
-        this.type = type;
-        this.bookedSeats = new ArrayList<>();
+        this.availableSeats = totalSeats;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
     }
 
-    public void setRoute(Route route) {
-        this.route = route;
-    }
-
-    public Route getRoute() {
-        return route;
-    }
-
-    public String getTrainNumber() {
-        return trainNumber;
-    }
-
-    public String getTrainName() {
-        return trainName;
-    }
-
-    public int getTotalSeats() {
-        return totalSeats;
-    }
-
-    public int getAvailableSeats() {
-        return totalSeats - bookedSeats.size();
-    }
-
-    public boolean isSeatAvailable(String seatNumber) {
-        return !bookedSeats.contains(seatNumber);
-    }
-
-    public boolean bookSeat(String seatNumber) {
-        if (isSeatAvailable(seatNumber)) {
-            bookedSeats.add(seatNumber);
+    public boolean bookSeat() {
+        if (availableSeats > 0) {
+            availableSeats--;
             return true;
         }
         return false;
     }
 
-    public void releaseSeat(String seatNumber) {
-        bookedSeats.remove(seatNumber);
+    public void cancelSeat() {
+        if (availableSeats < totalSeats) {
+            availableSeats++;
+        }
     }
 
+    public String getTrainId() { return trainId; }
+    public String getTrainName() { return trainName; }
+    public String getRouteId() { return routeId; }
+    public int getTotalSeats() { return totalSeats; }
+    public int getAvailableSeats() { return availableSeats; }
+    public String getDepartureTime() { return departureTime; }
+    public String getArrivalTime() { return arrivalTime; }
+
     public void displayInfo() {
-        System.out.println("Train: " + trainName + " (" + trainNumber + ")");
-        System.out.println("Type: " + type);
-        System.out.println("Available Seats: " + getAvailableSeats() + "/" + totalSeats);
-        if (route != null) {
-            System.out.println("Route: " + route.getOrigin() + " → " + route.getDestination());
-        }
+        System.out.println("Train: " + trainName + " (" + trainId + ")");
+        System.out.println("Route: " + routeId);
+        System.out.println("Schedule: " + departureTime + " - " + arrivalTime);
+        System.out.println("Seats: " + availableSeats + "/" + totalSeats);
     }
 }

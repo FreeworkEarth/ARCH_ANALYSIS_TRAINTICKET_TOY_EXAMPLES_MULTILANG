@@ -3,70 +3,42 @@ package TTS;
 import java.util.ArrayList;
 
 /**
- * Represents a route between stations
+ * Route entity
+ * MAJOR IMPROVEMENT: Uses station IDs instead of TrainStation objects
+ * This breaks the cyclic dependency!
  */
 public class Route {
     private String routeId;
-    private TrainStation origin;
-    private TrainStation destination;
-    private ArrayList<TrainStation> intermediateStops;
-    private double distance; // in km
+    private String originStationId;        // CHANGED: Was TrainStation object
+    private String destinationStationId;   // CHANGED: Was TrainStation object
+    private ArrayList<String> intermediateStopIds;  // CHANGED: Was ArrayList<TrainStation>
+    private double distance;
     private double baseFare;
 
-    public Route(String routeId, TrainStation origin, TrainStation destination, double distance) {
+    public Route(String routeId, String originStationId, String destinationStationId, double distance, double baseFare) {
         this.routeId = routeId;
-        this.origin = origin;
-        this.destination = destination;
+        this.originStationId = originStationId;
+        this.destinationStationId = destinationStationId;
+        this.intermediateStopIds = new ArrayList<>();
         this.distance = distance;
-        this.intermediateStops = new ArrayList<>();
-        this.baseFare = calculateFare();
+        this.baseFare = baseFare;
     }
 
-    public void addIntermediateStop(TrainStation station) {
-        intermediateStops.add(station);
+    public void addIntermediateStop(String stationId) {
+        intermediateStopIds.add(stationId);
     }
 
-    private double calculateFare() {
-        // Simple fare calculation: $0.10 per km
-        return distance * 0.10;
-    }
-
-    public String getRouteId() {
-        return routeId;
-    }
-
-    public TrainStation getOrigin() {
-        return origin;
-    }
-
-    public TrainStation getDestination() {
-        return destination;
-    }
-
-    public double getDistance() {
-        return distance;
-    }
-
-    public double getBaseFare() {
-        return baseFare;
-    }
-
-    public ArrayList<TrainStation> getIntermediateStops() {
-        return intermediateStops;
-    }
+    public String getRouteId() { return routeId; }
+    public String getOriginStationId() { return originStationId; }
+    public String getDestinationStationId() { return destinationStationId; }
+    public ArrayList<String> getIntermediateStopIds() { return intermediateStopIds; }
+    public double getDistance() { return distance; }
+    public double getBaseFare() { return baseFare; }
 
     public void displayInfo() {
-        System.out.println("Route ID: " + routeId);
-        System.out.println("Origin: " + origin.getName());
-        System.out.println("Destination: " + destination.getName());
-        System.out.println("Distance: " + distance + " km");
-        System.out.println("Base Fare: $" + baseFare);
-        if (!intermediateStops.isEmpty()) {
-            System.out.print("Stops: ");
-            for (TrainStation stop : intermediateStops) {
-                System.out.print(stop.getName() + " ");
-            }
-            System.out.println();
-        }
+        System.out.println("Route: " + routeId);
+        System.out.println("From: " + originStationId + " To: " + destinationStationId);
+        System.out.println("Distance: " + distance + " km, Fare: $" + baseFare);
+        System.out.println("Stops: " + intermediateStopIds.size());
     }
 }

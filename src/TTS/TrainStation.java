@@ -1,79 +1,34 @@
 package TTS;
 
-import java.util.ArrayList;
-
 /**
- * Represents a train station
+ * TrainStation entity
+ * MAJOR IMPROVEMENT: Removed all collections and bidirectional dependencies
+ * Now a pure entity with only its own data
  */
 public class TrainStation {
-    private String stationCode;
-    private String name;
+    private String stationId;
+    private String stationName;
     private String city;
-    private ArrayList<TicketAgent> agents;
-    private ArrayList<Train> availableTrains;
+    private String state;
 
-    public TrainStation(String stationCode, String name, String city) {
-        this.stationCode = stationCode;
-        this.name = name;
+    // REMOVED: ArrayList<TicketAgent> agents
+    // REMOVED: ArrayList<Train> availableTrains
+    // These are now managed by repositories!
+
+    public TrainStation(String stationId, String stationName, String city, String state) {
+        this.stationId = stationId;
+        this.stationName = stationName;
         this.city = city;
-        this.agents = new ArrayList<>();
-        this.availableTrains = new ArrayList<>();
+        this.state = state;
     }
 
-    public void addAgent(TicketAgent agent) {
-        agents.add(agent);
-        agent.setAssignedStation(this);
-    }
-
-    public void addTrain(Train train) {
-        if (!availableTrains.contains(train)) {
-            availableTrains.add(train);
-        }
-    }
-
-    public void removeTrain(Train train) {
-        availableTrains.remove(train);
-    }
-
-    public ArrayList<Train> searchTrains(TrainStation destination) {
-        ArrayList<Train> matchingTrains = new ArrayList<>();
-        for (Train train : availableTrains) {
-            if (train.getRoute() != null &&
-                train.getRoute().getDestination().equals(destination)) {
-                matchingTrains.add(train);
-            }
-        }
-        return matchingTrains;
-    }
-
-    public String getStationCode() {
-        return stationCode;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public ArrayList<TicketAgent> getAgents() {
-        return agents;
-    }
+    public String getStationId() { return stationId; }
+    public String getStationName() { return stationName; }
+    public String getCity() { return city; }
+    public String getState() { return state; }
 
     public void displayInfo() {
-        System.out.println("Station: " + name + " (" + stationCode + ")");
-        System.out.println("City: " + city);
-        System.out.println("Agents: " + agents.size());
-        System.out.println("Available Trains: " + availableTrains.size());
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        TrainStation that = (TrainStation) obj;
-        return stationCode.equals(that.stationCode);
+        System.out.println("Station: " + stationName + " (" + stationId + ")");
+        System.out.println("Location: " + city + ", " + state);
     }
 }

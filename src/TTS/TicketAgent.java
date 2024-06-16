@@ -1,49 +1,25 @@
 package TTS;
 
 /**
- * Ticket agent who can book/cancel tickets for passengers
+ * TicketAgent - staff role
+ * IMPROVED: Reduced to just employee data
+ * Business logic moved to BookingService
  */
 public class TicketAgent extends Staff {
-    private int ticketsProcessed;
-    private TrainStation assignedStation;
+    private String assignedStationId;  // CHANGED: Was TrainStation object
 
     public TicketAgent(String name, String id, String email, String phone,
-                       String employeeId, double salary) {
-        super(name, id, email, phone, employeeId, salary, "Ticketing");
-        this.ticketsProcessed = 0;
+                       String employeeId, double salary, String assignedStationId) {
+        super(name, id, email, phone, employeeId, salary);
+        this.assignedStationId = assignedStationId;
     }
 
-    public void setAssignedStation(TrainStation station) {
-        this.assignedStation = station;
-    }
-
-    public Ticket issueTicket(Passenger passenger, Route route, Train train,
-                               String seatNumber, double price) {
-        Ticket ticket = new Ticket(passenger, route, train, seatNumber, price);
-        passenger.bookTicket(ticket);
-        ticketsProcessed++;
-        return ticket;
-    }
-
-    public void cancelTicket(Passenger passenger, Ticket ticket) {
-        passenger.cancelTicket(ticket);
-        ticket.cancel();
-        ticketsProcessed++;
-    }
-
-    public int getTicketsProcessed() {
-        return ticketsProcessed;
-    }
-
-    @Override
-    public void performDuties() {
-        System.out.println("Processing ticket bookings and cancellations");
-    }
+    public String getAssignedStationId() { return assignedStationId; }
 
     @Override
     public void displayInfo() {
-        System.out.println("Ticket Agent: " + name);
-        System.out.println("Employee ID: " + employeeId);
-        System.out.println("Tickets Processed: " + ticketsProcessed);
+        System.out.println("Ticket Agent: " + name + " (ID: " + employeeId + ")");
+        System.out.println("Assigned Station: " + assignedStationId);
+        System.out.println("Salary: $" + salary);
     }
 }

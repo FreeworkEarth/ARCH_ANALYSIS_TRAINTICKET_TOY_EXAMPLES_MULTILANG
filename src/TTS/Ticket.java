@@ -4,72 +4,52 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * Represents a train ticket
+ * Ticket entity
+ * IMPROVED: Uses IDs instead of object references
  */
 public class Ticket {
-    private static int ticketCounter = 1000;
-
     private String ticketId;
-    private Passenger passenger;
-    private Route route;
-    private Train train;
+    private String passengerId;  // CHANGED: Was Passenger object
+    private String routeId;      // CHANGED: Was Route object
+    private String trainId;      // CHANGED: Was Train object
     private String seatNumber;
-    private double price;
-    private LocalDateTime bookingTime;
-    private String status; // BOOKED, CANCELLED, COMPLETED
+    private double fare;
+    private String bookingDate;
+    private String travelDate;
+    private String status;
 
-    public Ticket(Passenger passenger, Route route, Train train,
-                  String seatNumber, double price) {
-        this.ticketId = "TKT" + (ticketCounter++);
-        this.passenger = passenger;
-        this.route = route;
-        this.train = train;
+    public Ticket(String ticketId, String passengerId, String routeId, String trainId,
+                  String seatNumber, double fare, String travelDate) {
+        this.ticketId = ticketId;
+        this.passengerId = passengerId;
+        this.routeId = routeId;
+        this.trainId = trainId;
         this.seatNumber = seatNumber;
-        this.price = price;
-        this.bookingTime = LocalDateTime.now();
-        this.status = "BOOKED";
+        this.fare = fare;
+        this.travelDate = travelDate;
+        this.bookingDate = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+        this.status = "CONFIRMED";
     }
 
     public void cancel() {
         this.status = "CANCELLED";
-        train.releaseSeat(seatNumber);
     }
 
-    public void complete() {
-        this.status = "COMPLETED";
-    }
+    public String getTicketId() { return ticketId; }
+    public String getPassengerId() { return passengerId; }
+    public String getRouteId() { return routeId; }
+    public String getTrainId() { return trainId; }
+    public String getSeatNumber() { return seatNumber; }
+    public double getFare() { return fare; }
+    public String getBookingDate() { return bookingDate; }
+    public String getTravelDate() { return travelDate; }
+    public String getStatus() { return status; }
 
-    public String getTicketId() {
-        return ticketId;
-    }
-
-    public Passenger getPassenger() {
-        return passenger;
-    }
-
-    public String getSeatNumber() {
-        return seatNumber;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void displayTicket() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        System.out.println("╔══════════════ TRAIN TICKET ══════════════╗");
-        System.out.println("  Ticket ID: " + ticketId);
-        System.out.println("  Passenger: " + passenger.getName());
-        System.out.println("  Train: " + train.getTrainName() + " (" + train.getTrainNumber() + ")");
-        System.out.println("  Route: " + route.getOrigin().getName() + " → " + route.getDestination().getName());
-        System.out.println("  Seat: " + seatNumber);
-        System.out.println("  Price: $" + String.format("%.2f", price));
-        System.out.println("  Booked: " + bookingTime.format(formatter));
-        System.out.println("  Status: " + status);
-        System.out.println("╚══════════════════════════════════════════╝");
+    public void displayInfo() {
+        System.out.println("Ticket: " + ticketId + " [" + status + "]");
+        System.out.println("Passenger: " + passengerId);
+        System.out.println("Train: " + trainId + " on Route: " + routeId);
+        System.out.println("Seat: " + seatNumber + ", Fare: $" + fare);
+        System.out.println("Travel Date: " + travelDate);
     }
 }
