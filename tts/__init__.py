@@ -1,2 +1,2 @@
-# TrainTicketSystem - FIRST Version (Poor Architecture)
-# God class, cyclic dependencies, high coupling
+# TrainTicketSystem - SECOND Version (Good Architecture)
+# Repository pattern, no cycles, low coupling
