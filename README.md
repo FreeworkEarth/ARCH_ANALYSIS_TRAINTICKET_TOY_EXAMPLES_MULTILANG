@@ -146,6 +146,61 @@ Both versions implement a train ticket booking system with:
 
 Domain complexity is realistic but manageable for testing purposes.
 
+## Temporal Analysis Branch
+
+For testing temporal analysis pipelines, use the `temporal` branch:
+
+### Temporal Branch Features
+
+The `temporal` branch provides commit history showing architectural evolution:
+
+**Commit 1** (2024-01-15): Initial implementation with FIRST versions only
+
+- Bad architecture (god class anti-pattern)
+- High coupling, low cohesion
+- Issues: #1, #2, #3 open
+
+**Commit 2** (2024-06-15): Refactoring with SECOND versions added
+
+- Good architecture (repository pattern)
+- Reduced coupling, improved cohesion
+- Issues: #1, #2, #3 fixed
+
+### Setup Temporal Branch
+
+```bash
+# Run setup script to create temporal branch
+./scripts/setup_temporal_branch.sh
+
+# Push to GitHub
+git push -f origin temporal
+
+# Create corresponding issues
+export GITHUB_TOKEN="your_token"
+python3 scripts/create_temporal_issues.py
+```
+
+See [scripts/README.md](scripts/README.md) for detailed documentation.
+
+### Using Temporal Branch
+
+```bash
+# Clone temporal branch
+git clone --branch temporal https://github.com/FreeworkEarth/ARCH_ANALYSIS_TRAINTICKET_TOY_EXAMPLES_MULTILANG.git
+
+# Analyze evolution
+git log --oneline
+# Shows 2 commits: Initial → Refactored
+
+# Test temporal analysis
+# Commit 1: FIRST versions (bad architecture)
+# Commit 2: FIRST removed, SECOND added (good architecture)
+# Your pipeline should detect:
+# - Complete architectural refactoring
+# - Issue resolution (#1, #2, #3)
+# - Metric improvements (M-Score, coupling, etc.)
+```
+
 ## Related Projects
 
 - **[NeoDepends](https://github.com/jlefever/neodepends)**: Multi-language dependency extraction
