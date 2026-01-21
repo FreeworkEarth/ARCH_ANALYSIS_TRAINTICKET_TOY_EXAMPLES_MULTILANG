@@ -30,10 +30,11 @@ echo "========================================================================"
 echo ""
 echo "This script will:"
 echo "  1. Delete existing 'temporal' branch (if exists)"
-echo "  2. Create fresh 'temporal' branch with commit history"
-echo "  3. Commit 1: FIRST versions (bad architecture)"
-echo "  4. Commit 2: SECOND versions (good architecture)"
-echo "  5. Create issues for temporal analysis"
+echo "  2. Save current repository content to temp directory"
+echo "  3. Create fresh 'temporal' branch with commit history"
+echo "  4. Commit 1: FIRST versions (bad architecture)"
+echo "  5. Commit 2: SECOND versions (good architecture)"
+echo "  6. Display summary"
 echo ""
 read -p "Continue? (y/n) " -n 1 -r
 echo ""
@@ -66,26 +67,45 @@ fi
 echo "Cleanup complete!"
 
 # ============================================================================
-# STEP 2: Create orphan temporal branch (fresh commit history)
+# STEP 2: Save current content to temp directory
 # ============================================================================
 echo ""
-echo "Step 2: Creating fresh temporal branch..."
+echo "Step 2: Saving current repository content..."
+echo "========================================================================"
+
+# Save the current branch content to temp location BEFORE creating orphan branch
+TEMP_DIR=$(mktemp -d)
+echo "Temp directory: $TEMP_DIR"
+cp -r "$REPO_ROOT/java/first_godclass_antipattern" "$TEMP_DIR/java_first"
+cp -r "$REPO_ROOT/python/first_godclass_antipattern" "$TEMP_DIR/python_first"
+cp -r "$REPO_ROOT/java/second_repository_refactored" "$TEMP_DIR/java_second"
+cp -r "$REPO_ROOT/python/second_repository_refactored" "$TEMP_DIR/python_second"
+cp "$REPO_ROOT/LICENSE" "$TEMP_DIR/"
+cp "$REPO_ROOT/.gitignore" "$TEMP_DIR/"
+
+echo "Content saved to temp directory!"
+
+# ============================================================================
+# STEP 3: Create orphan temporal branch (fresh commit history)
+# ============================================================================
+echo ""
+echo "Step 3: Creating fresh temporal branch..."
 echo "========================================================================"
 
 git checkout --orphan temporal
 git rm -rf .
 
 # ============================================================================
-# STEP 3: COMMIT 1 - Initial implementation (FIRST only)
+# STEP 4: COMMIT 1 - Initial implementation (FIRST only)
 # ============================================================================
 echo ""
-echo "Step 3: Creating Commit 1 (Initial - Bad Architecture)..."
+echo "Step 4: Creating Commit 1 (Initial - Bad Architecture)..."
 echo "========================================================================"
 
-# Copy FIRST versions only
+# Copy FIRST versions from temp
 mkdir -p java python
-cp -r "$REPO_ROOT/../ARCH_ANALYSIS_TRAINTICKET_TOY_EXAMPLES/java/first_godclass_antipattern" java/first_godclass_antipattern
-cp -r "$REPO_ROOT/../ARCH_ANALYSIS_TRAINTICKET_TOY_EXAMPLES/python/first_godclass_antipattern" python/first_godclass_antipattern
+cp -r "$TEMP_DIR/java_first" java/first_godclass_antipattern
+cp -r "$TEMP_DIR/python_first" python/first_godclass_antipattern
 
 # Create README for temporal branch
 cat > README.md << 'EOF'
@@ -159,9 +179,9 @@ See GitHub issues for problems addressed in Commit 2 refactoring.
 For questions: charing@hawaii.edu
 EOF
 
-# Copy LICENSE and .gitignore from main
-cp "$REPO_ROOT/../ARCH_ANALYSIS_TRAINTICKET_TOY_EXAMPLES/LICENSE" .
-cp "$REPO_ROOT/../ARCH_ANALYSIS_TRAINTICKET_TOY_EXAMPLES/.gitignore" .
+# Copy LICENSE and .gitignore from temp
+cp "$TEMP_DIR/LICENSE" .
+cp "$TEMP_DIR/.gitignore" .
 
 # Stage all files
 git add .
@@ -195,19 +215,22 @@ Related issues: #1, #2, #3"
 echo "Commit 1 created: $(git rev-parse HEAD)"
 
 # ============================================================================
-# STEP 4: COMMIT 2 - Refactored implementation (FIRST replaced with SECOND)
+# STEP 5: COMMIT 2 - Refactored implementation (FIRST replaced with SECOND)
 # ============================================================================
 echo ""
-echo "Step 4: Creating Commit 2 (Refactored - Good Architecture)..."
+echo "Step 5: Creating Commit 2 (Refactored - Good Architecture)..."
 echo "========================================================================"
 
 # Remove FIRST versions
 rm -rf java/first_godclass_antipattern
 rm -rf python/first_godclass_antipattern
 
-# Add SECOND versions in their place
-cp -r "$REPO_ROOT/../ARCH_ANALYSIS_TRAINTICKET_TOY_EXAMPLES/java/second_repository_refactored" java/second_repository_refactored
-cp -r "$REPO_ROOT/../ARCH_ANALYSIS_TRAINTICKET_TOY_EXAMPLES/python/second_repository_refactored" python/second_repository_refactored
+# Add SECOND versions in their place (from temp)
+cp -r "$TEMP_DIR/java_second" java/second_repository_refactored
+cp -r "$TEMP_DIR/python_second" python/second_repository_refactored
+
+# Clean up temp directory
+rm -rf "$TEMP_DIR"
 
 # Update README to reflect refactoring
 cat >> README.md << 'EOF'
@@ -271,7 +294,7 @@ Fixes #1, #2, #3"
 echo "Commit 2 created: $(git rev-parse HEAD)"
 
 # ============================================================================
-# STEP 5: Display summary
+# STEP 6: Display summary
 # ============================================================================
 echo ""
 echo "========================================================================"
