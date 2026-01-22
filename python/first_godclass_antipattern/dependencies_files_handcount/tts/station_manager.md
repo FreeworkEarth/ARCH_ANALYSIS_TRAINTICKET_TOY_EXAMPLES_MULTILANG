@@ -4,10 +4,11 @@
 
 - Import: 1
 - Extend: 1
+- Override: 1
 - Create: 0
 - Call: 2
 - Use: 9
-- Total: 13
+- Total: 14
 
 ## Import edges
 
@@ -16,6 +17,10 @@
 ## Extend edges
 
 - tts/station_manager.py/CLASSES/StationManager (Class) -> tts/staff.py/CLASSES/Staff (Class)
+
+## Override edges
+
+- tts/station_manager.py/CLASSES/StationManager/METHODS/perform_duties (Method) -> tts/staff.py/CLASSES/Staff/METHODS/perform_duties (Method)
 
 ## Call edges
 

@@ -485,6 +485,11 @@
     "Extend"
   ],
   [
+    "tts/station_manager.py/CLASSES/StationManager/METHODS/perform_duties (Method)",
+    "tts/staff.py/CLASSES/Staff/METHODS/perform_duties (Method)",
+    "Override"
+  ],
+  [
     "tts/station_manager.py/CLASSES/StationManager/CONSTRUCTORS/__init__ (Constructor)",
     "tts/staff.py/CLASSES/Staff/CONSTRUCTORS/__init__ (Constructor)",
     "Call"
@@ -688,6 +693,11 @@
     "tts/ticket_agent.py/CLASSES/TicketAgent (Class)",
     "tts/staff.py/CLASSES/Staff (Class)",
     "Extend"
+  ],
+  [
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/perform_duties (Method)",
+    "tts/staff.py/CLASSES/Staff/METHODS/perform_duties (Method)",
+    "Override"
   ],
   [
     "tts/ticket_agent.py/CLASSES/TicketAgent/CONSTRUCTORS/__init__ (Constructor)",

@@ -4,10 +4,11 @@
 
 - Import: 2
 - Extend: 1
+- Override: 1
 - Create: 1
 - Call: 4
 - Use: 9
-- Total: 17
+- Total: 18
 
 ## Import edges
 
@@ -17,6 +18,10 @@
 ## Extend edges
 
 - tts/ticket_agent.py/CLASSES/TicketAgent (Class) -> tts/staff.py/CLASSES/Staff (Class)
+
+## Override edges
+
+- tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/perform_duties (Method) -> tts/staff.py/CLASSES/Staff/METHODS/perform_duties (Method)
 
 ## Create edges
 

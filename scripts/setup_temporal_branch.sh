@@ -76,14 +76,24 @@ echo "========================================================================"
 # Save the current branch content to temp location BEFORE creating orphan branch
 TEMP_DIR=$(mktemp -d)
 echo "Temp directory: $TEMP_DIR"
-cp -r "$REPO_ROOT/java/first_godclass_antipattern" "$TEMP_DIR/java_first"
-cp -r "$REPO_ROOT/python/first_godclass_antipattern" "$TEMP_DIR/python_first"
-cp -r "$REPO_ROOT/java/second_repository_refactored" "$TEMP_DIR/java_second"
-cp -r "$REPO_ROOT/python/second_repository_refactored" "$TEMP_DIR/python_second"
+
+# Copy Java FIRST (excluding handcount folders)
+rsync -a --exclude='dependencies_files_handcount' "$REPO_ROOT/java/first_godclass_antipattern/" "$TEMP_DIR/java_first/"
+
+# Copy Python FIRST (excluding handcount folders)
+rsync -a --exclude='dependencies_files_handcount' "$REPO_ROOT/python/first_godclass_antipattern/" "$TEMP_DIR/python_first/"
+
+# Copy Java SECOND (excluding handcount folders)
+rsync -a --exclude='dependencies_files_handcount' "$REPO_ROOT/java/second_repository_refactored/" "$TEMP_DIR/java_second/"
+
+# Copy Python SECOND (excluding handcount folders)
+rsync -a --exclude='dependencies_files_handcount' "$REPO_ROOT/python/second_repository_refactored/" "$TEMP_DIR/python_second/"
+
+# Copy LICENSE and .gitignore
 cp "$REPO_ROOT/LICENSE" "$TEMP_DIR/"
 cp "$REPO_ROOT/.gitignore" "$TEMP_DIR/"
 
-echo "Content saved to temp directory!"
+echo "Content saved to temp directory (handcount folders excluded)!"
 
 # ============================================================================
 # STEP 3: Create orphan temporal branch (fresh commit history)

@@ -57,14 +57,20 @@ We count these categories (even if we later “collapse” them in the DV8 DSM):
 2) `Extend` (Class -> Class)
    - `class A(B):` where `B` resolves to an internal class
 
-3) `Create` (Method/Function -> Class)
+3) `Override` (Method -> Method)
+   - A child class method overrides an abstract method from a parent class
+   - `class A(B): def m(self): ...` where `B.m` is marked with `@abstractmethod`
+   - Includes both direct overrides and transitive overrides (through intermediate abstract classes)
+   - Only count overrides of abstract methods (methods decorated with `@abstractmethod`)
+
+4) `Create` (Method/Function -> Class)
    - `C(...)` where `C` resolves to an internal class (constructor call)
 
-4) `Call` (Method/Function -> Method/Function)
+5) `Call` (Method/Function -> Method/Function)
    - `obj.m(...)` where `m` resolves to an internal method or internal function
    - includes `self.m(...)`, `super().m(...)`, and `ClassName.m(...)` (class method call) if resolvable
 
-5) `Use` (Method/Function -> Field)
+6) `Use` (Method/Function -> Field)
    - any read/write of `self.<field>` inside a method body where `<field>` is an internal field
    - inherited fields: if `self.name` is defined on a base class inside this project, it counts as `Use` too
 
@@ -99,10 +105,11 @@ Uniqueness is by `(source_entity, target_entity, kind)`.
 
 For each file, produce:
 
-1) A list of edges grouped by kind (`Import`, `Extend`, `Create`, `Call`, `Use`)
+1) A list of edges grouped by kind (`Import`, `Extend`, `Override`, `Create`, `Call`, `Use`)
 2) A totals section:
    - `Import: N`
    - `Extend: N`
+   - `Override: N`
    - `Create: N`
    - `Call: N`
    - `Use: N`

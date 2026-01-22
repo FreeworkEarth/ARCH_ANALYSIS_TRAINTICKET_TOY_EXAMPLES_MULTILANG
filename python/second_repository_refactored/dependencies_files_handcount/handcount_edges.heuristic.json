@@ -335,6 +335,11 @@
     "Extend"
   ],
   [
+    "tts/passenger.py/CLASSES/Passenger/METHODS/display_info (Method)",
+    "tts/person.py/CLASSES/Person/METHODS/display_info (Method)",
+    "Override"
+  ],
+  [
     "tts/passenger.py/CLASSES/Passenger/CONSTRUCTORS/__init__ (Constructor)",
     "tts/person.py/CLASSES/Person/CONSTRUCTORS/__init__ (Constructor)",
     "Call"
@@ -770,6 +775,11 @@
     "Extend"
   ],
   [
+    "tts/station_manager.py/CLASSES/StationManager/METHODS/display_info (Method)",
+    "tts/person.py/CLASSES/Person/METHODS/display_info (Method)",
+    "Override"
+  ],
+  [
     "tts/station_manager.py/CLASSES/StationManager/CONSTRUCTORS/__init__ (Constructor)",
     "tts/staff.py/CLASSES/Staff/CONSTRUCTORS/__init__ (Constructor)",
     "Call"
@@ -898,6 +908,11 @@
     "tts/ticket_agent.py/CLASSES/TicketAgent (Class)",
     "tts/staff.py/CLASSES/Staff (Class)",
     "Extend"
+  ],
+  [
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/display_info (Method)",
+    "tts/person.py/CLASSES/Person/METHODS/display_info (Method)",
+    "Override"
   ],
   [
     "tts/ticket_agent.py/CLASSES/TicketAgent/CONSTRUCTORS/__init__ (Constructor)",

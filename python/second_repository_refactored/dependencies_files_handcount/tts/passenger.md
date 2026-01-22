@@ -4,10 +4,11 @@
 
 - Import: 1
 - Extend: 1
+- Override: 1
 - Create: 0
 - Call: 1
 - Use: 7
-- Total: 10
+- Total: 11
 
 ## Import edges
 
@@ -16,6 +17,10 @@
 ## Extend edges
 
 - tts/passenger.py/CLASSES/Passenger (Class) -> tts/person.py/CLASSES/Person (Class)
+
+## Override edges
+
+- tts/passenger.py/CLASSES/Passenger/METHODS/display_info (Method) -> tts/person.py/CLASSES/Person/METHODS/display_info (Method)
 
 ## Call edges
 
