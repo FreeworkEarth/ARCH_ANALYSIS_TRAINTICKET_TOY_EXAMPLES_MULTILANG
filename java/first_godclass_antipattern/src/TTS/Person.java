@@ -3,7 +3,7 @@ package TTS;
 /**
  * Base class for all people in the train ticket system
  */
-public abstract class Person {
+public class Person {
     protected String name;
     protected String id;
     protected String email;
@@ -25,5 +25,8 @@ public abstract class Person {
     public void setEmail(String email) { this.email = email; }
     public void setPhone(String phone) { this.phone = phone; }
 
-    public abstract void displayInfo();
+    public void displayInfo() {
+        System.out.println("Person: " + name + " (ID: " + id + ")");
+        System.out.println("Email: " + email + ", Phone: " + phone);
+    }
 }
