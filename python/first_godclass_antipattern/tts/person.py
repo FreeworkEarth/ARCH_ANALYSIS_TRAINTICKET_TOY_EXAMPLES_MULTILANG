@@ -1,10 +1,11 @@
 """
-Base class for all people in the system
+Base abstract class for all people in the system
 """
+from abc import ABC, abstractmethod
 
 
-class Person:
-    """Base class for Person entities"""
+class Person(ABC):
+    """Base abstract class for Person entities"""
 
     def __init__(self, name: str, person_id: str, email: str, phone: str):
         self.name = name
@@ -33,7 +34,7 @@ class Person:
     def set_phone(self, phone: str) -> None:
         self.phone = phone
 
+    @abstractmethod
     def display_info(self):
         """Display person information"""
-        print(f"Person: {self.name} (ID: {self.id})")
-        print(f"Email: {self.email}, Phone: {self.phone}")
+        pass
