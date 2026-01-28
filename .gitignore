@@ -53,3 +53,7 @@ Thumbs.db
 output_*/
 deps_*/
 *_results/
+
+# Keep ground-truth handcounts at repo root
+!DEPS_GROUND_TRUTH_HANDCOUNT/
+!DEPS_GROUND_TRUTH_HANDCOUNT/**
