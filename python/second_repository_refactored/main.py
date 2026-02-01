@@ -109,6 +109,11 @@ def main():
     print()
     manager1.display_info()
 
+    # Polymorphic example (isinstance + subclass-only method)
+    staff_member = agent1
+    if isinstance(staff_member, TicketAgent):
+        staff_member.get_assigned_station_id()
+
     print("\n=== Demo Complete ===")
 
 

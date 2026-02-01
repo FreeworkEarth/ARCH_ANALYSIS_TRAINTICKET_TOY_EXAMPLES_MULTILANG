@@ -99,6 +99,11 @@ def main():
     print()
     manager1.display_info()
 
+    # Polymorphic example (isinstance + subclass-only method)
+    staff_member = agent1
+    if isinstance(staff_member, TicketAgent):
+        staff_member.get_tickets_processed()
+
     # Demo: Cancel a ticket
     print("\n6. Cancelling Bob's ticket...")
     agent1.cancel_ticket(passenger2, ticket2)

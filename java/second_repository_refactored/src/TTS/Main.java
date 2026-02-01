@@ -89,6 +89,15 @@ public class Main {
             ticket1.displayInfo();
         }
 
+        // Polymorphic example (instanceof + cast)
+        TicketAgent agent1 = new TicketAgent("John Smith", "EMP001",
+                "john@railway.com", "555-0100", "AGT001", 45000.0, "NYC-001");
+        Staff staffMember = agent1;
+        if (staffMember instanceof TicketAgent) {
+            TicketAgent ta = (TicketAgent) staffMember;
+            System.out.println("Assigned Station: " + ta.getAssignedStationId());
+        }
+
         System.out.println("\n=== Demo Complete ===");
     }
 }

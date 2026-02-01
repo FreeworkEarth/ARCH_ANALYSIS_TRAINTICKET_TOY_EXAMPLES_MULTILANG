@@ -100,6 +100,13 @@ public class Main {
         System.out.println();
         manager1.displayInfo();
 
+        // Polymorphic example (instanceof + cast)
+        Staff staffMember = agent1;
+        if (staffMember instanceof TicketAgent) {
+            TicketAgent ta = (TicketAgent) staffMember;
+            System.out.println("Tickets processed: " + ta.getTicketsProcessed());
+        }
+
         // Demo: Cancel a ticket
         System.out.println("\n6. Cancelling Bob's ticket...");
         agent1.cancelTicket(passenger2, ticket2);

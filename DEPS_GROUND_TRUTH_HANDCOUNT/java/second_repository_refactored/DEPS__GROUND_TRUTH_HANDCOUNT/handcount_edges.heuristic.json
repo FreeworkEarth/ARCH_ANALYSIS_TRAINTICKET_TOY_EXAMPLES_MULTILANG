@@ -1,1243 +1,1762 @@
 [
-  ["=== EXTEND (Class -> Class) - 5 edges ===", "", ""],
-
-  ["TTS/Staff.java/Staff (Class)",
-   "TTS/Person.java/Person (Class)",
-   "Extend"],
-
-  ["TTS/Passenger.java/Passenger (Class)",
-   "TTS/Person.java/Person (Class)",
-   "Extend"],
-
-  ["TTS/TicketAgent.java/TicketAgent (Class)",
-   "TTS/Staff.java/Staff (Class)",
-   "Extend"],
-
-  ["TTS/StationManager.java/StationManager (Class)",
-   "TTS/Staff.java/Staff (Class)",
-   "Extend"],
-
-  ["TTS/AdvancedReportingService.java/AdvancedReportingService (Class)",
-   "TTS/ReportingService.java/ReportingService (Class)",
-   "Extend"],
-
-
-  ["=== OVERRIDE (Method -> Method) - 3 edges ===", "", ""],
-
-  ["TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
-   "TTS/Person.java/Person/methods/displayInfo (Method)",
-   "Override"],
-
-  ["TTS/TicketAgent.java/TicketAgent/methods/displayInfo (Method)",
-   "TTS/Person.java/Person/methods/displayInfo (Method)",
-   "Override"],
-
-  ["TTS/StationManager.java/StationManager/methods/displayInfo (Method)",
-   "TTS/Person.java/Person/methods/displayInfo (Method)",
-   "Override"],
-
-
-  ["=== CREATE (Method/Function -> Class) ===", "", ""],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/TrainStationRepository.java/TrainStationRepository (Class)",
-   "Create"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/TrainRepository.java/TrainRepository (Class)",
-   "Create"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/RouteRepository.java/RouteRepository (Class)",
-   "Create"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/PassengerRepository.java/PassengerRepository (Class)",
-   "Create"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/TicketRepository.java/TicketRepository (Class)",
-   "Create"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/BookingService.java/BookingService (Class)",
-   "Create"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/TrainStation.java/TrainStation (Class)",
-   "Create"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/Route.java/Route (Class)",
-   "Create"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/Train.java/Train (Class)",
-   "Create"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/Passenger.java/Passenger (Class)",
-   "Create"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/Ticket.java/Ticket (Class)",
-   "Create"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/ReportingService.java/ReportEntry (Class)",
-   "Create"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/ReportingService.java/ReportEntry (Class)",
-   "Create"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
-   "TTS/ReportingService.java/ReportEntry (Class)",
-   "Create"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
-   "TTS/ReportingService.java/RoutePopularity (Class)",
-   "Create"],
-
-
-  ["=== CALL (Method -> Method) ===", "", ""],
-
-  ["TTS/Passenger.java/Passenger/constructors/Passenger (Constructor)",
-   "TTS/Person.java/Person/constructors/Person (Constructor)",
-   "Call"],
-
-  ["TTS/Staff.java/Staff/constructors/Staff (Constructor)",
-   "TTS/Person.java/Person/constructors/Person (Constructor)",
-   "Call"],
-
-  ["TTS/TicketAgent.java/TicketAgent/constructors/TicketAgent (Constructor)",
-   "TTS/Staff.java/Staff/constructors/Staff (Constructor)",
-   "Call"],
-
-  ["TTS/StationManager.java/StationManager/constructors/StationManager (Constructor)",
-   "TTS/Staff.java/Staff/constructors/Staff (Constructor)",
-   "Call"],
-
-  ["TTS/AdvancedReportingService.java/AdvancedReportingService/constructors/AdvancedReportingService (Constructor)",
-   "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
-   "Call"],
-
-  ["TTS/AdvancedReportingService.java/AdvancedReportingService/methods/generateExecutiveSummary (Method)",
-   "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "Call"],
-
-  ["TTS/PassengerRepository.java/PassengerRepository/methods/addPassenger (Method)",
-   "TTS/Passenger.java/Passenger/methods/getId (Method)",
-   "Call"],
-
-  ["TTS/TicketRepository.java/TicketRepository/methods/addTicket (Method)",
-   "TTS/Ticket.java/Ticket/methods/getTicketId (Method)",
-   "Call"],
-
-  ["TTS/TicketRepository.java/TicketRepository/methods/getTicketsByPassenger (Method)",
-   "TTS/Ticket.java/Ticket/methods/getPassengerId (Method)",
-   "Call"],
-
-  ["TTS/TrainRepository.java/TrainRepository/methods/addTrain (Method)",
-   "TTS/Train.java/Train/methods/getTrainId (Method)",
-   "Call"],
-
-  ["TTS/TrainRepository.java/TrainRepository/methods/getTrainsByRoute (Method)",
-   "TTS/Train.java/Train/methods/getRouteId (Method)",
-   "Call"],
-
-  ["TTS/TrainStationRepository.java/TrainStationRepository/methods/addStation (Method)",
-   "TTS/TrainStation.java/TrainStation/methods/getStationId (Method)",
-   "Call"],
-
-  ["TTS/TrainStationRepository.java/TrainStationRepository/methods/findByName (Method)",
-   "TTS/TrainStation.java/TrainStation/methods/getStationName (Method)",
-   "Call"],
-
-  ["TTS/RouteRepository.java/RouteRepository/methods/addRoute (Method)",
-   "TTS/Route.java/Route/methods/getRouteId (Method)",
-   "Call"],
-
-  ["TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
-   "TTS/Route.java/Route/methods/getOriginStationId (Method)",
-   "Call"],
-
-  ["TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
-   "TTS/Route.java/Route/methods/getDestinationStationId (Method)",
-   "Call"],
-
-  ["TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
-   "TTS/Route.java/Route/methods/getIntermediateStopIds (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/PassengerRepository.java/PassengerRepository/methods/getPassenger (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/TrainRepository.java/TrainRepository/methods/getTrain (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/Train.java/Train/methods/bookSeat (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/Train.java/Train/methods/getTotalSeats (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/Train.java/Train/methods/getAvailableSeats (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/Train.java/Train/methods/getRouteId (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/RouteRepository.java/RouteRepository/methods/getRoute (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/Route.java/Route/methods/getBaseFare (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/TicketRepository.java/TicketRepository/methods/addTicket (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/Passenger.java/Passenger/methods/addTicket (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
-   "TTS/TicketRepository.java/TicketRepository/methods/getTicket (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
-   "TTS/Ticket.java/Ticket/methods/getStatus (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
-   "TTS/Ticket.java/Ticket/methods/getTrainId (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
-   "TTS/TrainRepository.java/TrainRepository/methods/getTrain (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
-   "TTS/Train.java/Train/methods/cancelSeat (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
-   "TTS/Ticket.java/Ticket/methods/cancel (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/searchTrains (Method)",
-   "TTS/TrainRepository.java/TrainRepository/methods/getTrainsByRoute (Method)",
-   "Call"],
-
-  ["TTS/BookingService.java/BookingService/methods/getPassengerTickets (Method)",
-   "TTS/TicketRepository.java/TicketRepository/methods/getTicketsByPassenger (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/TrainStationRepository.java/TrainStationRepository/methods/getAllStations (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/TrainStation.java/TrainStation/methods/getStationId (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/Route.java/Route/methods/getRouteId (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/Train.java/Train/methods/getRouteId (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/TrainStation.java/TrainStation/methods/getStationName (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/TrainStation.java/TrainStation/methods/getCity (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/Train.java/Train/methods/getTrainId (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/Train.java/Train/methods/getTrainName (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/Train.java/Train/methods/getRouteId (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/Train.java/Train/methods/getTotalSeats (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/Train.java/Train/methods/getAvailableSeats (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/Train.java/Train/methods/getDepartureTime (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/Train.java/Train/methods/getArrivalTime (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
-   "TTS/PassengerRepository.java/PassengerRepository/methods/getAllPassengers (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
-   "TTS/Passenger.java/Passenger/methods/getId (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
-   "TTS/Passenger.java/Passenger/methods/getName (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
-   "TTS/Passenger.java/Passenger/methods/getEmail (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
-   "TTS/Passenger.java/Passenger/methods/getTicketIds (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
-   "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
-   "TTS/Train.java/Train/methods/getTotalSeats (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
-   "TTS/Train.java/Train/methods/getAvailableSeats (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
-   "TTS/TicketRepository.java/TicketRepository/methods/getAllTickets (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
-   "TTS/Ticket.java/Ticket/methods/getStatus (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
-   "TTS/Ticket.java/Ticket/methods/getFare (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
-   "TTS/TicketRepository.java/TicketRepository/methods/getAllTickets (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
-   "TTS/Ticket.java/Ticket/methods/getRouteId (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
-   "TTS/ReportingService.java/RoutePopularity/methods/getCount (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
-   "TTS/RouteRepository.java/RouteRepository/methods/getAllRoutes (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
-   "TTS/Route.java/Route/methods/getOriginStationId (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
-   "TTS/Route.java/Route/methods/getDestinationStationId (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/TrainStationRepository.java/TrainStationRepository/methods/getAllStations (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/RouteRepository.java/RouteRepository/methods/getAllRoutes (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/PassengerRepository.java/PassengerRepository/methods/getAllPassengers (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/TicketRepository.java/TicketRepository/methods/getAllTickets (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
-   "Call"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/exportAllReports (Method)",
-   "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/TrainStationRepository.java/TrainStationRepository/methods/addStation (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/RouteRepository.java/RouteRepository/methods/addRoute (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/TrainRepository.java/TrainRepository/methods/addTrain (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/PassengerRepository.java/PassengerRepository/methods/addPassenger (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/TrainStationRepository.java/TrainStationRepository/methods/getAllStations (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/RouteRepository.java/RouteRepository/methods/getAllRoutes (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/PassengerRepository.java/PassengerRepository/methods/getAllPassengers (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/Ticket.java/Ticket/methods/getTicketId (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/BookingService.java/BookingService/methods/searchTrains (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/Train.java/Train/methods/displayInfo (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/BookingService.java/BookingService/methods/getPassengerTickets (Method)",
-   "Call"],
-
-  ["TTS/Main.java/Main/methods/main (Method)",
-   "TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
-   "Call"],
-
-
-  ["=== USE (Method -> Field) ===", "", ""],
-
-  ["TTS/Person.java/Person/constructors/Person (Constructor)",
-   "TTS/Person.java/Person/fields/name (Field)",
-   "Use"],
-
-  ["TTS/Person.java/Person/constructors/Person (Constructor)",
-   "TTS/Person.java/Person/fields/id (Field)",
-   "Use"],
-
-  ["TTS/Person.java/Person/constructors/Person (Constructor)",
-   "TTS/Person.java/Person/fields/email (Field)",
-   "Use"],
-
-  ["TTS/Person.java/Person/constructors/Person (Constructor)",
-   "TTS/Person.java/Person/fields/phone (Field)",
-   "Use"],
-
-  ["TTS/Person.java/Person/methods/getName (Method)",
-   "TTS/Person.java/Person/fields/name (Field)",
-   "Use"],
-
-  ["TTS/Person.java/Person/methods/getId (Method)",
-   "TTS/Person.java/Person/fields/id (Field)",
-   "Use"],
-
-  ["TTS/Person.java/Person/methods/getEmail (Method)",
-   "TTS/Person.java/Person/fields/email (Field)",
-   "Use"],
-
-  ["TTS/Person.java/Person/methods/getPhone (Method)",
-   "TTS/Person.java/Person/fields/phone (Field)",
-   "Use"],
-
-  ["TTS/Staff.java/Staff/constructors/Staff (Constructor)",
-   "TTS/Staff.java/Staff/fields/employeeId (Field)",
-   "Use"],
-
-  ["TTS/Staff.java/Staff/constructors/Staff (Constructor)",
-   "TTS/Staff.java/Staff/fields/salary (Field)",
-   "Use"],
-
-  ["TTS/Staff.java/Staff/methods/getEmployeeId (Method)",
-   "TTS/Staff.java/Staff/fields/employeeId (Field)",
-   "Use"],
-
-  ["TTS/Staff.java/Staff/methods/getSalary (Method)",
-   "TTS/Staff.java/Staff/fields/salary (Field)",
-   "Use"],
-
-  ["TTS/Passenger.java/Passenger/constructors/Passenger (Constructor)",
-   "TTS/Passenger.java/Passenger/fields/ticketIds (Field)",
-   "Use"],
-
-  ["TTS/Passenger.java/Passenger/methods/addTicket (Method)",
-   "TTS/Passenger.java/Passenger/fields/ticketIds (Field)",
-   "Use"],
-
-  ["TTS/Passenger.java/Passenger/methods/getTicketIds (Method)",
-   "TTS/Passenger.java/Passenger/fields/ticketIds (Field)",
-   "Use"],
-
-  ["TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
-   "TTS/Person.java/Person/fields/name (Field)",
-   "Use"],
-
-  ["TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
-   "TTS/Person.java/Person/fields/id (Field)",
-   "Use"],
-
-  ["TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
-   "TTS/Person.java/Person/fields/email (Field)",
-   "Use"],
-
-  ["TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
-   "TTS/Person.java/Person/fields/phone (Field)",
-   "Use"],
-
-  ["TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
-   "TTS/Passenger.java/Passenger/fields/ticketIds (Field)",
-   "Use"],
-
-  ["TTS/TicketAgent.java/TicketAgent/constructors/TicketAgent (Constructor)",
-   "TTS/TicketAgent.java/TicketAgent/fields/assignedStationId (Field)",
-   "Use"],
-
-  ["TTS/TicketAgent.java/TicketAgent/methods/getAssignedStationId (Method)",
-   "TTS/TicketAgent.java/TicketAgent/fields/assignedStationId (Field)",
-   "Use"],
-
-  ["TTS/TicketAgent.java/TicketAgent/methods/displayInfo (Method)",
-   "TTS/Person.java/Person/fields/name (Field)",
-   "Use"],
-
-  ["TTS/TicketAgent.java/TicketAgent/methods/displayInfo (Method)",
-   "TTS/Staff.java/Staff/fields/employeeId (Field)",
-   "Use"],
-
-  ["TTS/TicketAgent.java/TicketAgent/methods/displayInfo (Method)",
-   "TTS/TicketAgent.java/TicketAgent/fields/assignedStationId (Field)",
-   "Use"],
-
-  ["TTS/TicketAgent.java/TicketAgent/methods/displayInfo (Method)",
-   "TTS/Staff.java/Staff/fields/salary (Field)",
-   "Use"],
-
-  ["TTS/StationManager.java/StationManager/constructors/StationManager (Constructor)",
-   "TTS/StationManager.java/StationManager/fields/managedStationId (Field)",
-   "Use"],
-
-  ["TTS/StationManager.java/StationManager/methods/getManagedStationId (Method)",
-   "TTS/StationManager.java/StationManager/fields/managedStationId (Field)",
-   "Use"],
-
-  ["TTS/StationManager.java/StationManager/methods/displayInfo (Method)",
-   "TTS/Person.java/Person/fields/name (Field)",
-   "Use"],
-
-  ["TTS/StationManager.java/StationManager/methods/displayInfo (Method)",
-   "TTS/Staff.java/Staff/fields/employeeId (Field)",
-   "Use"],
-
-  ["TTS/StationManager.java/StationManager/methods/displayInfo (Method)",
-   "TTS/StationManager.java/StationManager/fields/managedStationId (Field)",
-   "Use"],
-
-  ["TTS/StationManager.java/StationManager/methods/displayInfo (Method)",
-   "TTS/Staff.java/Staff/fields/salary (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
-   "TTS/Ticket.java/Ticket/fields/ticketId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
-   "TTS/Ticket.java/Ticket/fields/passengerId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
-   "TTS/Ticket.java/Ticket/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
-   "TTS/Ticket.java/Ticket/fields/trainId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
-   "TTS/Ticket.java/Ticket/fields/seatNumber (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
-   "TTS/Ticket.java/Ticket/fields/fare (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
-   "TTS/Ticket.java/Ticket/fields/travelDate (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
-   "TTS/Ticket.java/Ticket/fields/bookingDate (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
-   "TTS/Ticket.java/Ticket/fields/status (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/cancel (Method)",
-   "TTS/Ticket.java/Ticket/fields/status (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/getTicketId (Method)",
-   "TTS/Ticket.java/Ticket/fields/ticketId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/getPassengerId (Method)",
-   "TTS/Ticket.java/Ticket/fields/passengerId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/getRouteId (Method)",
-   "TTS/Ticket.java/Ticket/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/getTrainId (Method)",
-   "TTS/Ticket.java/Ticket/fields/trainId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/getSeatNumber (Method)",
-   "TTS/Ticket.java/Ticket/fields/seatNumber (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/getFare (Method)",
-   "TTS/Ticket.java/Ticket/fields/fare (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/getBookingDate (Method)",
-   "TTS/Ticket.java/Ticket/fields/bookingDate (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/getTravelDate (Method)",
-   "TTS/Ticket.java/Ticket/fields/travelDate (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/getStatus (Method)",
-   "TTS/Ticket.java/Ticket/fields/status (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
-   "TTS/Ticket.java/Ticket/fields/ticketId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
-   "TTS/Ticket.java/Ticket/fields/status (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
-   "TTS/Ticket.java/Ticket/fields/passengerId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
-   "TTS/Ticket.java/Ticket/fields/trainId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
-   "TTS/Ticket.java/Ticket/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
-   "TTS/Ticket.java/Ticket/fields/seatNumber (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
-   "TTS/Ticket.java/Ticket/fields/fare (Field)",
-   "Use"],
-
-  ["TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
-   "TTS/Ticket.java/Ticket/fields/travelDate (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/constructors/Train (Constructor)",
-   "TTS/Train.java/Train/fields/trainId (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/constructors/Train (Constructor)",
-   "TTS/Train.java/Train/fields/trainName (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/constructors/Train (Constructor)",
-   "TTS/Train.java/Train/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/constructors/Train (Constructor)",
-   "TTS/Train.java/Train/fields/totalSeats (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/constructors/Train (Constructor)",
-   "TTS/Train.java/Train/fields/availableSeats (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/constructors/Train (Constructor)",
-   "TTS/Train.java/Train/fields/departureTime (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/constructors/Train (Constructor)",
-   "TTS/Train.java/Train/fields/arrivalTime (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/bookSeat (Method)",
-   "TTS/Train.java/Train/fields/availableSeats (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/cancelSeat (Method)",
-   "TTS/Train.java/Train/fields/availableSeats (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/cancelSeat (Method)",
-   "TTS/Train.java/Train/fields/totalSeats (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/getTrainId (Method)",
-   "TTS/Train.java/Train/fields/trainId (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/getTrainName (Method)",
-   "TTS/Train.java/Train/fields/trainName (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/getRouteId (Method)",
-   "TTS/Train.java/Train/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/getTotalSeats (Method)",
-   "TTS/Train.java/Train/fields/totalSeats (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/getAvailableSeats (Method)",
-   "TTS/Train.java/Train/fields/availableSeats (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/getDepartureTime (Method)",
-   "TTS/Train.java/Train/fields/departureTime (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/getArrivalTime (Method)",
-   "TTS/Train.java/Train/fields/arrivalTime (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/displayInfo (Method)",
-   "TTS/Train.java/Train/fields/trainName (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/displayInfo (Method)",
-   "TTS/Train.java/Train/fields/trainId (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/displayInfo (Method)",
-   "TTS/Train.java/Train/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/displayInfo (Method)",
-   "TTS/Train.java/Train/fields/departureTime (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/displayInfo (Method)",
-   "TTS/Train.java/Train/fields/arrivalTime (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/displayInfo (Method)",
-   "TTS/Train.java/Train/fields/availableSeats (Field)",
-   "Use"],
-
-  ["TTS/Train.java/Train/methods/displayInfo (Method)",
-   "TTS/Train.java/Train/fields/totalSeats (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/constructors/TrainStation (Constructor)",
-   "TTS/TrainStation.java/TrainStation/fields/stationId (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/constructors/TrainStation (Constructor)",
-   "TTS/TrainStation.java/TrainStation/fields/stationName (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/constructors/TrainStation (Constructor)",
-   "TTS/TrainStation.java/TrainStation/fields/city (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/constructors/TrainStation (Constructor)",
-   "TTS/TrainStation.java/TrainStation/fields/state (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/methods/getStationId (Method)",
-   "TTS/TrainStation.java/TrainStation/fields/stationId (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/methods/getStationName (Method)",
-   "TTS/TrainStation.java/TrainStation/fields/stationName (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/methods/getCity (Method)",
-   "TTS/TrainStation.java/TrainStation/fields/city (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/methods/getState (Method)",
-   "TTS/TrainStation.java/TrainStation/fields/state (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/methods/displayInfo (Method)",
-   "TTS/TrainStation.java/TrainStation/fields/stationName (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/methods/displayInfo (Method)",
-   "TTS/TrainStation.java/TrainStation/fields/stationId (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/methods/displayInfo (Method)",
-   "TTS/TrainStation.java/TrainStation/fields/city (Field)",
-   "Use"],
-
-  ["TTS/TrainStation.java/TrainStation/methods/displayInfo (Method)",
-   "TTS/TrainStation.java/TrainStation/fields/state (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/constructors/Route (Constructor)",
-   "TTS/Route.java/Route/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/constructors/Route (Constructor)",
-   "TTS/Route.java/Route/fields/originStationId (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/constructors/Route (Constructor)",
-   "TTS/Route.java/Route/fields/destinationStationId (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/constructors/Route (Constructor)",
-   "TTS/Route.java/Route/fields/intermediateStopIds (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/constructors/Route (Constructor)",
-   "TTS/Route.java/Route/fields/distance (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/constructors/Route (Constructor)",
-   "TTS/Route.java/Route/fields/baseFare (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/addIntermediateStop (Method)",
-   "TTS/Route.java/Route/fields/intermediateStopIds (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/getRouteId (Method)",
-   "TTS/Route.java/Route/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/getOriginStationId (Method)",
-   "TTS/Route.java/Route/fields/originStationId (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/getDestinationStationId (Method)",
-   "TTS/Route.java/Route/fields/destinationStationId (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/getIntermediateStopIds (Method)",
-   "TTS/Route.java/Route/fields/intermediateStopIds (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/getDistance (Method)",
-   "TTS/Route.java/Route/fields/distance (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/getBaseFare (Method)",
-   "TTS/Route.java/Route/fields/baseFare (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/displayInfo (Method)",
-   "TTS/Route.java/Route/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/displayInfo (Method)",
-   "TTS/Route.java/Route/fields/originStationId (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/displayInfo (Method)",
-   "TTS/Route.java/Route/fields/destinationStationId (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/displayInfo (Method)",
-   "TTS/Route.java/Route/fields/distance (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/displayInfo (Method)",
-   "TTS/Route.java/Route/fields/baseFare (Field)",
-   "Use"],
-
-  ["TTS/Route.java/Route/methods/displayInfo (Method)",
-   "TTS/Route.java/Route/fields/intermediateStopIds (Field)",
-   "Use"],
-
-  ["TTS/PassengerRepository.java/PassengerRepository/constructors/PassengerRepository (Constructor)",
-   "TTS/PassengerRepository.java/PassengerRepository/fields/passengers (Field)",
-   "Use"],
-
-  ["TTS/PassengerRepository.java/PassengerRepository/methods/addPassenger (Method)",
-   "TTS/PassengerRepository.java/PassengerRepository/fields/passengers (Field)",
-   "Use"],
-
-  ["TTS/PassengerRepository.java/PassengerRepository/methods/getPassenger (Method)",
-   "TTS/PassengerRepository.java/PassengerRepository/fields/passengers (Field)",
-   "Use"],
-
-  ["TTS/PassengerRepository.java/PassengerRepository/methods/getAllPassengers (Method)",
-   "TTS/PassengerRepository.java/PassengerRepository/fields/passengers (Field)",
-   "Use"],
-
-  ["TTS/TicketRepository.java/TicketRepository/constructors/TicketRepository (Constructor)",
-   "TTS/TicketRepository.java/TicketRepository/fields/tickets (Field)",
-   "Use"],
-
-  ["TTS/TicketRepository.java/TicketRepository/methods/addTicket (Method)",
-   "TTS/TicketRepository.java/TicketRepository/fields/tickets (Field)",
-   "Use"],
-
-  ["TTS/TicketRepository.java/TicketRepository/methods/getTicket (Method)",
-   "TTS/TicketRepository.java/TicketRepository/fields/tickets (Field)",
-   "Use"],
-
-  ["TTS/TicketRepository.java/TicketRepository/methods/getAllTickets (Method)",
-   "TTS/TicketRepository.java/TicketRepository/fields/tickets (Field)",
-   "Use"],
-
-  ["TTS/TicketRepository.java/TicketRepository/methods/getTicketsByPassenger (Method)",
-   "TTS/TicketRepository.java/TicketRepository/fields/tickets (Field)",
-   "Use"],
-
-  ["TTS/TrainRepository.java/TrainRepository/constructors/TrainRepository (Constructor)",
-   "TTS/TrainRepository.java/TrainRepository/fields/trains (Field)",
-   "Use"],
-
-  ["TTS/TrainRepository.java/TrainRepository/methods/addTrain (Method)",
-   "TTS/TrainRepository.java/TrainRepository/fields/trains (Field)",
-   "Use"],
-
-  ["TTS/TrainRepository.java/TrainRepository/methods/getTrain (Method)",
-   "TTS/TrainRepository.java/TrainRepository/fields/trains (Field)",
-   "Use"],
-
-  ["TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
-   "TTS/TrainRepository.java/TrainRepository/fields/trains (Field)",
-   "Use"],
-
-  ["TTS/TrainRepository.java/TrainRepository/methods/getTrainsByRoute (Method)",
-   "TTS/TrainRepository.java/TrainRepository/fields/trains (Field)",
-   "Use"],
-
-  ["TTS/TrainStationRepository.java/TrainStationRepository/constructors/TrainStationRepository (Constructor)",
-   "TTS/TrainStationRepository.java/TrainStationRepository/fields/stations (Field)",
-   "Use"],
-
-  ["TTS/TrainStationRepository.java/TrainStationRepository/methods/addStation (Method)",
-   "TTS/TrainStationRepository.java/TrainStationRepository/fields/stations (Field)",
-   "Use"],
-
-  ["TTS/TrainStationRepository.java/TrainStationRepository/methods/getStation (Method)",
-   "TTS/TrainStationRepository.java/TrainStationRepository/fields/stations (Field)",
-   "Use"],
-
-  ["TTS/TrainStationRepository.java/TrainStationRepository/methods/getAllStations (Method)",
-   "TTS/TrainStationRepository.java/TrainStationRepository/fields/stations (Field)",
-   "Use"],
-
-  ["TTS/TrainStationRepository.java/TrainStationRepository/methods/findByName (Method)",
-   "TTS/TrainStationRepository.java/TrainStationRepository/fields/stations (Field)",
-   "Use"],
-
-  ["TTS/RouteRepository.java/RouteRepository/constructors/RouteRepository (Constructor)",
-   "TTS/RouteRepository.java/RouteRepository/fields/routes (Field)",
-   "Use"],
-
-  ["TTS/RouteRepository.java/RouteRepository/methods/addRoute (Method)",
-   "TTS/RouteRepository.java/RouteRepository/fields/routes (Field)",
-   "Use"],
-
-  ["TTS/RouteRepository.java/RouteRepository/methods/getRoute (Method)",
-   "TTS/RouteRepository.java/RouteRepository/fields/routes (Field)",
-   "Use"],
-
-  ["TTS/RouteRepository.java/RouteRepository/methods/getAllRoutes (Method)",
-   "TTS/RouteRepository.java/RouteRepository/fields/routes (Field)",
-   "Use"],
-
-  ["TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
-   "TTS/RouteRepository.java/RouteRepository/fields/routes (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
-   "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
-   "TTS/BookingService.java/BookingService/fields/routeRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
-   "TTS/BookingService.java/BookingService/fields/ticketRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
-   "TTS/BookingService.java/BookingService/fields/passengerRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
-   "TTS/BookingService.java/BookingService/fields/stationRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/BookingService.java/BookingService/fields/passengerRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/BookingService.java/BookingService/fields/routeRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
-   "TTS/BookingService.java/BookingService/fields/ticketRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
-   "TTS/BookingService.java/BookingService/fields/ticketRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
-   "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/methods/searchTrains (Method)",
-   "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
-   "Use"],
-
-  ["TTS/BookingService.java/BookingService/methods/getPassengerTickets (Method)",
-   "TTS/BookingService.java/BookingService/fields/ticketRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
-   "TTS/ReportingService.java/ReportingService/fields/trainRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
-   "TTS/ReportingService.java/ReportingService/fields/routeRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
-   "TTS/ReportingService.java/ReportingService/fields/ticketRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
-   "TTS/ReportingService.java/ReportingService/fields/passengerRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
-   "TTS/ReportingService.java/ReportingService/fields/stationRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
-   "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
-   "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
-   "TTS/ReportingService.java/ReportingService/fields/cachedStats (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/stationRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/routeRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/trainRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/trainRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/passengerRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/trainRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/ticketRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/ticketRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/routeRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/cachedStats (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/stationRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/routeRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/trainRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/passengerRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/ticketRepo (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/clearCache (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/cachedStats (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/clearCache (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/exportAllReports (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportingService/methods/exportAllReports (Method)",
-   "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportEntry/constructors/ReportEntry (Constructor)",
-   "TTS/ReportingService.java/ReportEntry/fields/type (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportEntry/constructors/ReportEntry (Constructor)",
-   "TTS/ReportingService.java/ReportEntry/fields/data (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportEntry/methods/getType (Method)",
-   "TTS/ReportingService.java/ReportEntry/fields/type (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/ReportEntry/methods/getData (Method)",
-   "TTS/ReportingService.java/ReportEntry/fields/data (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/RoutePopularity/constructors/RoutePopularity (Constructor)",
-   "TTS/ReportingService.java/RoutePopularity/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/RoutePopularity/constructors/RoutePopularity (Constructor)",
-   "TTS/ReportingService.java/RoutePopularity/fields/count (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/RoutePopularity/methods/getRouteId (Method)",
-   "TTS/ReportingService.java/RoutePopularity/fields/routeId (Field)",
-   "Use"],
-
-  ["TTS/ReportingService.java/RoutePopularity/methods/getCount (Method)",
-   "TTS/ReportingService.java/RoutePopularity/fields/count (Field)",
-   "Use"]
+  [
+    "=== EXTEND (Class -> Class) - 5 edges ===",
+    "",
+    ""
+  ],
+  [
+    "TTS/Staff.java/Staff (Class)",
+    "TTS/Person.java/Person (Class)",
+    "Extend"
+  ],
+  [
+    "TTS/Passenger.java/Passenger (Class)",
+    "TTS/Person.java/Person (Class)",
+    "Extend"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent (Class)",
+    "TTS/Staff.java/Staff (Class)",
+    "Extend"
+  ],
+  [
+    "TTS/StationManager.java/StationManager (Class)",
+    "TTS/Staff.java/Staff (Class)",
+    "Extend"
+  ],
+  [
+    "TTS/AdvancedReportingService.java/AdvancedReportingService (Class)",
+    "TTS/ReportingService.java/ReportingService (Class)",
+    "Extend"
+  ],
+  [
+    "=== OVERRIDE (Method -> Method) - 3 edges ===",
+    "",
+    ""
+  ],
+  [
+    "TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
+    "TTS/Person.java/Person/methods/displayInfo (Method)",
+    "Override"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent/methods/displayInfo (Method)",
+    "TTS/Person.java/Person/methods/displayInfo (Method)",
+    "Override"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/methods/displayInfo (Method)",
+    "TTS/Person.java/Person/methods/displayInfo (Method)",
+    "Override"
+  ],
+  [
+    "=== CREATE (Method/Function -> Class) ===",
+    "",
+    ""
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/TrainStationRepository.java/TrainStationRepository (Class)",
+    "Create"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/TrainRepository.java/TrainRepository (Class)",
+    "Create"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/RouteRepository.java/RouteRepository (Class)",
+    "Create"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/PassengerRepository.java/PassengerRepository (Class)",
+    "Create"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/TicketRepository.java/TicketRepository (Class)",
+    "Create"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/BookingService.java/BookingService (Class)",
+    "Create"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/TrainStation.java/TrainStation (Class)",
+    "Create"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/Route.java/Route (Class)",
+    "Create"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/Train.java/Train (Class)",
+    "Create"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/Passenger.java/Passenger (Class)",
+    "Create"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/Ticket.java/Ticket (Class)",
+    "Create"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/ReportingService.java/ReportEntry (Class)",
+    "Create"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/ReportingService.java/ReportEntry (Class)",
+    "Create"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
+    "TTS/ReportingService.java/ReportEntry (Class)",
+    "Create"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
+    "TTS/ReportingService.java/RoutePopularity (Class)",
+    "Create"
+  ],
+  [
+    "=== CALL (Method -> Method) ===",
+    "",
+    ""
+  ],
+  [
+    "TTS/Passenger.java/Passenger/constructors/Passenger (Constructor)",
+    "TTS/Person.java/Person/constructors/Person (Constructor)",
+    "Call"
+  ],
+  [
+    "TTS/Staff.java/Staff/constructors/Staff (Constructor)",
+    "TTS/Person.java/Person/constructors/Person (Constructor)",
+    "Call"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent/constructors/TicketAgent (Constructor)",
+    "TTS/Staff.java/Staff/constructors/Staff (Constructor)",
+    "Call"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/constructors/StationManager (Constructor)",
+    "TTS/Staff.java/Staff/constructors/Staff (Constructor)",
+    "Call"
+  ],
+  [
+    "TTS/AdvancedReportingService.java/AdvancedReportingService/constructors/AdvancedReportingService (Constructor)",
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "Call"
+  ],
+  [
+    "TTS/AdvancedReportingService.java/AdvancedReportingService/methods/generateExecutiveSummary (Method)",
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "Call"
+  ],
+  [
+    "TTS/PassengerRepository.java/PassengerRepository/methods/addPassenger (Method)",
+    "TTS/Passenger.java/Passenger/methods/getId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/TicketRepository.java/TicketRepository/methods/addTicket (Method)",
+    "TTS/Ticket.java/Ticket/methods/getTicketId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/TicketRepository.java/TicketRepository/methods/getTicketsByPassenger (Method)",
+    "TTS/Ticket.java/Ticket/methods/getPassengerId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/TrainRepository.java/TrainRepository/methods/addTrain (Method)",
+    "TTS/Train.java/Train/methods/getTrainId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/TrainRepository.java/TrainRepository/methods/getTrainsByRoute (Method)",
+    "TTS/Train.java/Train/methods/getRouteId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/TrainStationRepository.java/TrainStationRepository/methods/addStation (Method)",
+    "TTS/TrainStation.java/TrainStation/methods/getStationId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/TrainStationRepository.java/TrainStationRepository/methods/findByName (Method)",
+    "TTS/TrainStation.java/TrainStation/methods/getStationName (Method)",
+    "Call"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/methods/addRoute (Method)",
+    "TTS/Route.java/Route/methods/getRouteId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
+    "TTS/Route.java/Route/methods/getOriginStationId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
+    "TTS/Route.java/Route/methods/getDestinationStationId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
+    "TTS/Route.java/Route/methods/getIntermediateStopIds (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/PassengerRepository.java/PassengerRepository/methods/getPassenger (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/TrainRepository.java/TrainRepository/methods/getTrain (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/Train.java/Train/methods/bookSeat (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/Train.java/Train/methods/getTotalSeats (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/Train.java/Train/methods/getAvailableSeats (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/Train.java/Train/methods/getRouteId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/RouteRepository.java/RouteRepository/methods/getRoute (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/Route.java/Route/methods/getBaseFare (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/TicketRepository.java/TicketRepository/methods/addTicket (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/Passenger.java/Passenger/methods/addTicket (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
+    "TTS/TicketRepository.java/TicketRepository/methods/getTicket (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
+    "TTS/Ticket.java/Ticket/methods/getStatus (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
+    "TTS/Ticket.java/Ticket/methods/getTrainId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
+    "TTS/TrainRepository.java/TrainRepository/methods/getTrain (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
+    "TTS/Train.java/Train/methods/cancelSeat (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
+    "TTS/Ticket.java/Ticket/methods/cancel (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/searchTrains (Method)",
+    "TTS/TrainRepository.java/TrainRepository/methods/getTrainsByRoute (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/getPassengerTickets (Method)",
+    "TTS/TicketRepository.java/TicketRepository/methods/getTicketsByPassenger (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/TrainStationRepository.java/TrainStationRepository/methods/getAllStations (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/TrainStation.java/TrainStation/methods/getStationId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/Route.java/Route/methods/getRouteId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/Train.java/Train/methods/getRouteId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/TrainStation.java/TrainStation/methods/getStationName (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/TrainStation.java/TrainStation/methods/getCity (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/Train.java/Train/methods/getTrainId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/Train.java/Train/methods/getTrainName (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/Train.java/Train/methods/getRouteId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/Train.java/Train/methods/getTotalSeats (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/Train.java/Train/methods/getAvailableSeats (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/Train.java/Train/methods/getDepartureTime (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/Train.java/Train/methods/getArrivalTime (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
+    "TTS/PassengerRepository.java/PassengerRepository/methods/getAllPassengers (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
+    "TTS/Passenger.java/Passenger/methods/getId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
+    "TTS/Passenger.java/Passenger/methods/getName (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
+    "TTS/Passenger.java/Passenger/methods/getEmail (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
+    "TTS/Passenger.java/Passenger/methods/getTicketIds (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
+    "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
+    "TTS/Train.java/Train/methods/getTotalSeats (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
+    "TTS/Train.java/Train/methods/getAvailableSeats (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
+    "TTS/TicketRepository.java/TicketRepository/methods/getAllTickets (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
+    "TTS/Ticket.java/Ticket/methods/getStatus (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
+    "TTS/Ticket.java/Ticket/methods/getFare (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
+    "TTS/TicketRepository.java/TicketRepository/methods/getAllTickets (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
+    "TTS/Ticket.java/Ticket/methods/getRouteId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
+    "TTS/ReportingService.java/RoutePopularity/methods/getCount (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
+    "TTS/RouteRepository.java/RouteRepository/methods/getAllRoutes (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
+    "TTS/Route.java/Route/methods/getOriginStationId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
+    "TTS/Route.java/Route/methods/getDestinationStationId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/TrainStationRepository.java/TrainStationRepository/methods/getAllStations (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/RouteRepository.java/RouteRepository/methods/getAllRoutes (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/PassengerRepository.java/PassengerRepository/methods/getAllPassengers (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/TicketRepository.java/TicketRepository/methods/getAllTickets (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
+    "Call"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/exportAllReports (Method)",
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/TrainStationRepository.java/TrainStationRepository/methods/addStation (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/RouteRepository.java/RouteRepository/methods/addRoute (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/TrainRepository.java/TrainRepository/methods/addTrain (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/PassengerRepository.java/PassengerRepository/methods/addPassenger (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/TrainStationRepository.java/TrainStationRepository/methods/getAllStations (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/RouteRepository.java/RouteRepository/methods/getAllRoutes (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/PassengerRepository.java/PassengerRepository/methods/getAllPassengers (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/Ticket.java/Ticket/methods/getTicketId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/BookingService.java/BookingService/methods/searchTrains (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/Train.java/Train/methods/displayInfo (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/BookingService.java/BookingService/methods/getPassengerTickets (Method)",
+    "Call"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
+    "Call"
+  ],
+  [
+    "=== USE (Method -> Field) ===",
+    "",
+    ""
+  ],
+  [
+    "TTS/Person.java/Person/constructors/Person (Constructor)",
+    "TTS/Person.java/Person/fields/name (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Person.java/Person/constructors/Person (Constructor)",
+    "TTS/Person.java/Person/fields/id (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Person.java/Person/constructors/Person (Constructor)",
+    "TTS/Person.java/Person/fields/email (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Person.java/Person/constructors/Person (Constructor)",
+    "TTS/Person.java/Person/fields/phone (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Person.java/Person/methods/getName (Method)",
+    "TTS/Person.java/Person/fields/name (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Person.java/Person/methods/getId (Method)",
+    "TTS/Person.java/Person/fields/id (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Person.java/Person/methods/getEmail (Method)",
+    "TTS/Person.java/Person/fields/email (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Person.java/Person/methods/getPhone (Method)",
+    "TTS/Person.java/Person/fields/phone (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Staff.java/Staff/constructors/Staff (Constructor)",
+    "TTS/Staff.java/Staff/fields/employeeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Staff.java/Staff/constructors/Staff (Constructor)",
+    "TTS/Staff.java/Staff/fields/salary (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Staff.java/Staff/methods/getEmployeeId (Method)",
+    "TTS/Staff.java/Staff/fields/employeeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Staff.java/Staff/methods/getSalary (Method)",
+    "TTS/Staff.java/Staff/fields/salary (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Passenger.java/Passenger/constructors/Passenger (Constructor)",
+    "TTS/Passenger.java/Passenger/fields/ticketIds (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Passenger.java/Passenger/methods/addTicket (Method)",
+    "TTS/Passenger.java/Passenger/fields/ticketIds (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Passenger.java/Passenger/methods/getTicketIds (Method)",
+    "TTS/Passenger.java/Passenger/fields/ticketIds (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
+    "TTS/Person.java/Person/fields/name (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
+    "TTS/Person.java/Person/fields/id (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
+    "TTS/Person.java/Person/fields/email (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
+    "TTS/Person.java/Person/fields/phone (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Passenger.java/Passenger/methods/displayInfo (Method)",
+    "TTS/Passenger.java/Passenger/fields/ticketIds (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent/constructors/TicketAgent (Constructor)",
+    "TTS/TicketAgent.java/TicketAgent/fields/assignedStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent/methods/getAssignedStationId (Method)",
+    "TTS/TicketAgent.java/TicketAgent/fields/assignedStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent/methods/displayInfo (Method)",
+    "TTS/Person.java/Person/fields/name (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent/methods/displayInfo (Method)",
+    "TTS/Staff.java/Staff/fields/employeeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent/methods/displayInfo (Method)",
+    "TTS/TicketAgent.java/TicketAgent/fields/assignedStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent/methods/displayInfo (Method)",
+    "TTS/Staff.java/Staff/fields/salary (Field)",
+    "Use"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/constructors/StationManager (Constructor)",
+    "TTS/StationManager.java/StationManager/fields/managedStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/methods/getManagedStationId (Method)",
+    "TTS/StationManager.java/StationManager/fields/managedStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/methods/displayInfo (Method)",
+    "TTS/Person.java/Person/fields/name (Field)",
+    "Use"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/methods/displayInfo (Method)",
+    "TTS/Staff.java/Staff/fields/employeeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/methods/displayInfo (Method)",
+    "TTS/StationManager.java/StationManager/fields/managedStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/methods/displayInfo (Method)",
+    "TTS/Staff.java/Staff/fields/salary (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
+    "TTS/Ticket.java/Ticket/fields/ticketId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
+    "TTS/Ticket.java/Ticket/fields/passengerId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
+    "TTS/Ticket.java/Ticket/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
+    "TTS/Ticket.java/Ticket/fields/trainId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
+    "TTS/Ticket.java/Ticket/fields/seatNumber (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
+    "TTS/Ticket.java/Ticket/fields/fare (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
+    "TTS/Ticket.java/Ticket/fields/travelDate (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
+    "TTS/Ticket.java/Ticket/fields/bookingDate (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
+    "TTS/Ticket.java/Ticket/fields/status (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/cancel (Method)",
+    "TTS/Ticket.java/Ticket/fields/status (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/getTicketId (Method)",
+    "TTS/Ticket.java/Ticket/fields/ticketId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/getPassengerId (Method)",
+    "TTS/Ticket.java/Ticket/fields/passengerId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/getRouteId (Method)",
+    "TTS/Ticket.java/Ticket/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/getTrainId (Method)",
+    "TTS/Ticket.java/Ticket/fields/trainId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/getSeatNumber (Method)",
+    "TTS/Ticket.java/Ticket/fields/seatNumber (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/getFare (Method)",
+    "TTS/Ticket.java/Ticket/fields/fare (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/getBookingDate (Method)",
+    "TTS/Ticket.java/Ticket/fields/bookingDate (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/getTravelDate (Method)",
+    "TTS/Ticket.java/Ticket/fields/travelDate (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/getStatus (Method)",
+    "TTS/Ticket.java/Ticket/fields/status (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
+    "TTS/Ticket.java/Ticket/fields/ticketId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
+    "TTS/Ticket.java/Ticket/fields/status (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
+    "TTS/Ticket.java/Ticket/fields/passengerId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
+    "TTS/Ticket.java/Ticket/fields/trainId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
+    "TTS/Ticket.java/Ticket/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
+    "TTS/Ticket.java/Ticket/fields/seatNumber (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
+    "TTS/Ticket.java/Ticket/fields/fare (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/displayInfo (Method)",
+    "TTS/Ticket.java/Ticket/fields/travelDate (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/constructors/Train (Constructor)",
+    "TTS/Train.java/Train/fields/trainId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/constructors/Train (Constructor)",
+    "TTS/Train.java/Train/fields/trainName (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/constructors/Train (Constructor)",
+    "TTS/Train.java/Train/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/constructors/Train (Constructor)",
+    "TTS/Train.java/Train/fields/totalSeats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/constructors/Train (Constructor)",
+    "TTS/Train.java/Train/fields/availableSeats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/constructors/Train (Constructor)",
+    "TTS/Train.java/Train/fields/departureTime (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/constructors/Train (Constructor)",
+    "TTS/Train.java/Train/fields/arrivalTime (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/bookSeat (Method)",
+    "TTS/Train.java/Train/fields/availableSeats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/cancelSeat (Method)",
+    "TTS/Train.java/Train/fields/availableSeats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/cancelSeat (Method)",
+    "TTS/Train.java/Train/fields/totalSeats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/getTrainId (Method)",
+    "TTS/Train.java/Train/fields/trainId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/getTrainName (Method)",
+    "TTS/Train.java/Train/fields/trainName (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/getRouteId (Method)",
+    "TTS/Train.java/Train/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/getTotalSeats (Method)",
+    "TTS/Train.java/Train/fields/totalSeats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/getAvailableSeats (Method)",
+    "TTS/Train.java/Train/fields/availableSeats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/getDepartureTime (Method)",
+    "TTS/Train.java/Train/fields/departureTime (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/getArrivalTime (Method)",
+    "TTS/Train.java/Train/fields/arrivalTime (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/displayInfo (Method)",
+    "TTS/Train.java/Train/fields/trainName (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/displayInfo (Method)",
+    "TTS/Train.java/Train/fields/trainId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/displayInfo (Method)",
+    "TTS/Train.java/Train/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/displayInfo (Method)",
+    "TTS/Train.java/Train/fields/departureTime (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/displayInfo (Method)",
+    "TTS/Train.java/Train/fields/arrivalTime (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/displayInfo (Method)",
+    "TTS/Train.java/Train/fields/availableSeats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/methods/displayInfo (Method)",
+    "TTS/Train.java/Train/fields/totalSeats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/constructors/TrainStation (Constructor)",
+    "TTS/TrainStation.java/TrainStation/fields/stationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/constructors/TrainStation (Constructor)",
+    "TTS/TrainStation.java/TrainStation/fields/stationName (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/constructors/TrainStation (Constructor)",
+    "TTS/TrainStation.java/TrainStation/fields/city (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/constructors/TrainStation (Constructor)",
+    "TTS/TrainStation.java/TrainStation/fields/state (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/methods/getStationId (Method)",
+    "TTS/TrainStation.java/TrainStation/fields/stationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/methods/getStationName (Method)",
+    "TTS/TrainStation.java/TrainStation/fields/stationName (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/methods/getCity (Method)",
+    "TTS/TrainStation.java/TrainStation/fields/city (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/methods/getState (Method)",
+    "TTS/TrainStation.java/TrainStation/fields/state (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/methods/displayInfo (Method)",
+    "TTS/TrainStation.java/TrainStation/fields/stationName (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/methods/displayInfo (Method)",
+    "TTS/TrainStation.java/TrainStation/fields/stationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/methods/displayInfo (Method)",
+    "TTS/TrainStation.java/TrainStation/fields/city (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/methods/displayInfo (Method)",
+    "TTS/TrainStation.java/TrainStation/fields/state (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/constructors/Route (Constructor)",
+    "TTS/Route.java/Route/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/constructors/Route (Constructor)",
+    "TTS/Route.java/Route/fields/originStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/constructors/Route (Constructor)",
+    "TTS/Route.java/Route/fields/destinationStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/constructors/Route (Constructor)",
+    "TTS/Route.java/Route/fields/intermediateStopIds (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/constructors/Route (Constructor)",
+    "TTS/Route.java/Route/fields/distance (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/constructors/Route (Constructor)",
+    "TTS/Route.java/Route/fields/baseFare (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/addIntermediateStop (Method)",
+    "TTS/Route.java/Route/fields/intermediateStopIds (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/getRouteId (Method)",
+    "TTS/Route.java/Route/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/getOriginStationId (Method)",
+    "TTS/Route.java/Route/fields/originStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/getDestinationStationId (Method)",
+    "TTS/Route.java/Route/fields/destinationStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/getIntermediateStopIds (Method)",
+    "TTS/Route.java/Route/fields/intermediateStopIds (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/getDistance (Method)",
+    "TTS/Route.java/Route/fields/distance (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/getBaseFare (Method)",
+    "TTS/Route.java/Route/fields/baseFare (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/displayInfo (Method)",
+    "TTS/Route.java/Route/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/displayInfo (Method)",
+    "TTS/Route.java/Route/fields/originStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/displayInfo (Method)",
+    "TTS/Route.java/Route/fields/destinationStationId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/displayInfo (Method)",
+    "TTS/Route.java/Route/fields/distance (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/displayInfo (Method)",
+    "TTS/Route.java/Route/fields/baseFare (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/methods/displayInfo (Method)",
+    "TTS/Route.java/Route/fields/intermediateStopIds (Field)",
+    "Use"
+  ],
+  [
+    "TTS/PassengerRepository.java/PassengerRepository/constructors/PassengerRepository (Constructor)",
+    "TTS/PassengerRepository.java/PassengerRepository/fields/passengers (Field)",
+    "Use"
+  ],
+  [
+    "TTS/PassengerRepository.java/PassengerRepository/methods/addPassenger (Method)",
+    "TTS/PassengerRepository.java/PassengerRepository/fields/passengers (Field)",
+    "Use"
+  ],
+  [
+    "TTS/PassengerRepository.java/PassengerRepository/methods/getPassenger (Method)",
+    "TTS/PassengerRepository.java/PassengerRepository/fields/passengers (Field)",
+    "Use"
+  ],
+  [
+    "TTS/PassengerRepository.java/PassengerRepository/methods/getAllPassengers (Method)",
+    "TTS/PassengerRepository.java/PassengerRepository/fields/passengers (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketRepository.java/TicketRepository/constructors/TicketRepository (Constructor)",
+    "TTS/TicketRepository.java/TicketRepository/fields/tickets (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketRepository.java/TicketRepository/methods/addTicket (Method)",
+    "TTS/TicketRepository.java/TicketRepository/fields/tickets (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketRepository.java/TicketRepository/methods/getTicket (Method)",
+    "TTS/TicketRepository.java/TicketRepository/fields/tickets (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketRepository.java/TicketRepository/methods/getAllTickets (Method)",
+    "TTS/TicketRepository.java/TicketRepository/fields/tickets (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TicketRepository.java/TicketRepository/methods/getTicketsByPassenger (Method)",
+    "TTS/TicketRepository.java/TicketRepository/fields/tickets (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainRepository.java/TrainRepository/constructors/TrainRepository (Constructor)",
+    "TTS/TrainRepository.java/TrainRepository/fields/trains (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainRepository.java/TrainRepository/methods/addTrain (Method)",
+    "TTS/TrainRepository.java/TrainRepository/fields/trains (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainRepository.java/TrainRepository/methods/getTrain (Method)",
+    "TTS/TrainRepository.java/TrainRepository/fields/trains (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainRepository.java/TrainRepository/methods/getAllTrains (Method)",
+    "TTS/TrainRepository.java/TrainRepository/fields/trains (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainRepository.java/TrainRepository/methods/getTrainsByRoute (Method)",
+    "TTS/TrainRepository.java/TrainRepository/fields/trains (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStationRepository.java/TrainStationRepository/constructors/TrainStationRepository (Constructor)",
+    "TTS/TrainStationRepository.java/TrainStationRepository/fields/stations (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStationRepository.java/TrainStationRepository/methods/addStation (Method)",
+    "TTS/TrainStationRepository.java/TrainStationRepository/fields/stations (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStationRepository.java/TrainStationRepository/methods/getStation (Method)",
+    "TTS/TrainStationRepository.java/TrainStationRepository/fields/stations (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStationRepository.java/TrainStationRepository/methods/getAllStations (Method)",
+    "TTS/TrainStationRepository.java/TrainStationRepository/fields/stations (Field)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStationRepository.java/TrainStationRepository/methods/findByName (Method)",
+    "TTS/TrainStationRepository.java/TrainStationRepository/fields/stations (Field)",
+    "Use"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/constructors/RouteRepository (Constructor)",
+    "TTS/RouteRepository.java/RouteRepository/fields/routes (Field)",
+    "Use"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/methods/addRoute (Method)",
+    "TTS/RouteRepository.java/RouteRepository/fields/routes (Field)",
+    "Use"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/methods/getRoute (Method)",
+    "TTS/RouteRepository.java/RouteRepository/fields/routes (Field)",
+    "Use"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/methods/getAllRoutes (Method)",
+    "TTS/RouteRepository.java/RouteRepository/fields/routes (Field)",
+    "Use"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
+    "TTS/RouteRepository.java/RouteRepository/fields/routes (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/BookingService.java/BookingService/fields/routeRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/BookingService.java/BookingService/fields/ticketRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/BookingService.java/BookingService/fields/passengerRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/BookingService.java/BookingService/fields/stationRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/BookingService.java/BookingService/fields/passengerRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/BookingService.java/BookingService/fields/routeRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/bookTicket (Method)",
+    "TTS/BookingService.java/BookingService/fields/ticketRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
+    "TTS/BookingService.java/BookingService/fields/ticketRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/cancelTicket (Method)",
+    "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/searchTrains (Method)",
+    "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/methods/getPassengerTickets (Method)",
+    "TTS/BookingService.java/BookingService/fields/ticketRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/ReportingService.java/ReportingService/fields/trainRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/ReportingService.java/ReportingService/fields/routeRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/ReportingService.java/ReportingService/fields/ticketRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/ReportingService.java/ReportingService/fields/passengerRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/ReportingService.java/ReportingService/fields/stationRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/ReportingService.java/ReportingService/fields/cachedStats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/stationRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/routeRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/trainRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/trainRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateTrainReport (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/passengerRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generatePassengerReport (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/trainRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/calculateOccupancyRate (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/ticketRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/calculateRevenue (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/ticketRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/routeRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/cachedStats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/stationRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/routeRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/trainRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/passengerRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/ticketRepo (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateSummary (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/clearCache (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/cachedStats (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/clearCache (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/exportAllReports (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/reports (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/exportAllReports (Method)",
+    "TTS/ReportingService.java/ReportingService/fields/metrics (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportEntry/constructors/ReportEntry (Constructor)",
+    "TTS/ReportingService.java/ReportEntry/fields/type (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportEntry/constructors/ReportEntry (Constructor)",
+    "TTS/ReportingService.java/ReportEntry/fields/data (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportEntry/methods/getType (Method)",
+    "TTS/ReportingService.java/ReportEntry/fields/type (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportEntry/methods/getData (Method)",
+    "TTS/ReportingService.java/ReportEntry/fields/data (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/RoutePopularity/constructors/RoutePopularity (Constructor)",
+    "TTS/ReportingService.java/RoutePopularity/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/RoutePopularity/constructors/RoutePopularity (Constructor)",
+    "TTS/ReportingService.java/RoutePopularity/fields/count (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/RoutePopularity/methods/getRouteId (Method)",
+    "TTS/ReportingService.java/RoutePopularity/fields/routeId (Field)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/RoutePopularity/methods/getCount (Method)",
+    "TTS/ReportingService.java/RoutePopularity/fields/count (Field)",
+    "Use"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/TicketAgent.java/TicketAgent/self (Class)",
+    "Create"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/TicketAgent.java/TicketAgent/methods/getAssignedStationId (Method)",
+    "Call"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/BookingService.java/BookingService (Class)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/PassengerRepository.java/PassengerRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/RouteRepository.java/RouteRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/TicketRepository.java/TicketRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/TrainRepository.java/TrainRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/constructors/BookingService (Constructor)",
+    "TTS/TrainStationRepository.java/TrainStationRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/Ticket.java/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Main.java/Main/methods/main (Method)",
+    "TTS/Train.java/Train (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Passenger.java/Passenger/constructors/Passenger (Constructor)",
+    "TTS/Passenger.java/Passenger (Class)",
+    "Use"
+  ],
+  [
+    "TTS/PassengerRepository.java/PassengerRepository/constructors/PassengerRepository (Constructor)",
+    "TTS/PassengerRepository.java/PassengerRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Person.java/Person/constructors/Person (Constructor)",
+    "TTS/Person.java/Person (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportEntry/constructors/ReportEntry (Constructor)",
+    "TTS/ReportingService.java/ReportEntry (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/PassengerRepository.java/PassengerRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/ReportingService.java/ReportingService (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/RouteRepository.java/RouteRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/TicketRepository.java/TicketRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/TrainRepository.java/TrainRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/constructors/ReportingService (Constructor)",
+    "TTS/TrainStationRepository.java/TrainStationRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/clearCache (Method)",
+    "TTS/ReportingService.java/ReportingService (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/generateStationReport (Method)",
+    "TTS/Route.java/Route (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getPopularRoutes (Method)",
+    "TTS/ReportingService.java/RoutePopularity (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/ReportingService/methods/getStationTraffic (Method)",
+    "TTS/ReportingService.java/ReportingService (Class)",
+    "Use"
+  ],
+  [
+    "TTS/ReportingService.java/RoutePopularity/constructors/RoutePopularity (Constructor)",
+    "TTS/ReportingService.java/RoutePopularity (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/constructors/Route (Constructor)",
+    "TTS/Route.java/Route (Class)",
+    "Use"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/constructors/RouteRepository (Constructor)",
+    "TTS/RouteRepository.java/RouteRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/RouteRepository.java/RouteRepository/methods/getRoutesByStation (Method)",
+    "TTS/Route.java/Route (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Staff.java/Staff/constructors/Staff (Constructor)",
+    "TTS/Staff.java/Staff (Class)",
+    "Use"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/constructors/StationManager (Constructor)",
+    "TTS/StationManager.java/StationManager (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/constructors/Ticket (Constructor)",
+    "TTS/Ticket.java/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/methods/cancel (Method)",
+    "TTS/Ticket.java/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent/constructors/TicketAgent (Constructor)",
+    "TTS/TicketAgent.java/TicketAgent (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TicketRepository.java/TicketRepository/constructors/TicketRepository (Constructor)",
+    "TTS/TicketRepository.java/TicketRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TicketRepository.java/TicketRepository/methods/getTicketsByPassenger (Method)",
+    "TTS/Ticket.java/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Train.java/Train/constructors/Train (Constructor)",
+    "TTS/Train.java/Train (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TrainRepository.java/TrainRepository/constructors/TrainRepository (Constructor)",
+    "TTS/TrainRepository.java/TrainRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TrainRepository.java/TrainRepository/methods/getTrainsByRoute (Method)",
+    "TTS/Train.java/Train (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/constructors/TrainStation (Constructor)",
+    "TTS/TrainStation.java/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStationRepository.java/TrainStationRepository/constructors/TrainStationRepository (Constructor)",
+    "TTS/TrainStationRepository.java/TrainStationRepository (Class)",
+    "Use"
+  ]
 ]

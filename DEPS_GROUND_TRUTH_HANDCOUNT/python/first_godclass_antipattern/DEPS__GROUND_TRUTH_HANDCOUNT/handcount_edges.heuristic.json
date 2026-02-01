@@ -1308,5 +1308,110 @@
     "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/display_info (Method)",
     "tts/person.py/CLASSES/Person/METHODS/display_info (Method)",
     "Override"
+  ],
+  [
+    "main.py/FUNCTIONS/main (Function)",
+    "tts/ticket_agent.py/CLASSES/TicketAgent (Class)",
+    "Use"
+  ],
+  [
+    "main.py/FUNCTIONS/main (Function)",
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/get_tickets_processed (Method)",
+    "Call"
+  ],
+  [
+    "main.py/FUNCTIONS/main (Function)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "main.py/FUNCTIONS/main (Function)",
+    "tts/staff.py/CLASSES/Staff (Class)",
+    "Use"
+  ],
+  [
+    "tts/passenger.py/CLASSES/Passenger/FIELDS/loyalty_points (Field)",
+    "tts/passenger.py/CLASSES/Passenger/FIELDS/loyalty_points (Field)",
+    "Use"
+  ],
+  [
+    "tts/passenger.py/CLASSES/Passenger/METHODS/book_ticket (Method)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "tts/passenger.py/CLASSES/Passenger/METHODS/cancel_ticket (Method)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "tts/passenger.py/CLASSES/Passenger/METHODS/display_info (Method)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "tts/passenger.py/CLASSES/Passenger/METHODS/get_booked_tickets (Method)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "tts/passenger.py/CLASSES/Passenger/METHODS/get_loyalty_points (Method)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "tts/staff.py/CLASSES/Staff/METHODS/get_department (Method)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "tts/staff.py/CLASSES/Staff/METHODS/get_employee_id (Method)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "tts/staff.py/CLASSES/Staff/METHODS/get_salary (Method)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "tts/station_manager.py/CLASSES/StationManager/METHODS/display_info (Method)",
+    "tts/staff.py/CLASSES/Staff (Class)",
+    "Use"
+  ],
+  [
+    "tts/station_manager.py/CLASSES/StationManager/METHODS/get_scheduled_trains (Method)",
+    "tts/staff.py/CLASSES/Staff (Class)",
+    "Use"
+  ],
+  [
+    "tts/station_manager.py/CLASSES/StationManager/METHODS/remove_train_schedule (Method)",
+    "tts/staff.py/CLASSES/Staff (Class)",
+    "Use"
+  ],
+  [
+    "tts/ticket.py/CLASSES/Ticket/CONSTRUCTORS/__init__ (Constructor)",
+    "tts/ticket.py/CLASSES/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "tts/ticket.py/CLASSES/Ticket/FIELDS/ticket_id (Field)",
+    "tts/ticket.py/CLASSES/Ticket/FIELDS/ticket_counter (Field)",
+    "Use"
+  ],
+  [
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/display_info (Method)",
+    "tts/staff.py/CLASSES/Staff (Class)",
+    "Use"
+  ],
+  [
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/get_tickets_processed (Method)",
+    "tts/staff.py/CLASSES/Staff (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_station.py/CLASSES/TrainStation/METHODS/__eq__ (Method)",
+    "tts/train_station.py/CLASSES/TrainStation (Class)",
+    "Use"
   ]
 ]

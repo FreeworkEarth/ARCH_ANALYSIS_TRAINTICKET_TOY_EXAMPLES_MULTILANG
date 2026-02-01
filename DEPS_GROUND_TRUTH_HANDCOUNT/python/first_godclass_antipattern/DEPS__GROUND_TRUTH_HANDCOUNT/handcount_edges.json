@@ -1278,5 +1278,15 @@
     "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/display_info (Method)",
     "tts/person.py/CLASSES/Person/METHODS/display_info (Method)",
     "Override"
+  ],
+  [
+    "main.py/FUNCTIONS/main (Function)",
+    "tts/ticket_agent.py/CLASSES/TicketAgent (Class)",
+    "Use"
+  ],
+  [
+    "main.py/FUNCTIONS/main (Function)",
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/get_tickets_processed (Method)",
+    "Call"
   ]
 ]

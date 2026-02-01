@@ -1158,5 +1158,180 @@
     "tts/train_station_repository.py/CLASSES/TrainStationRepository/METHODS/get_station (Method)",
     "tts/train_station_repository.py/CLASSES/TrainStationRepository/FIELDS/stations (Field)",
     "Use"
+  ],
+  [
+    "main.py/FUNCTIONS/main (Function)",
+    "tts/ticket_agent.py/CLASSES/TicketAgent (Class)",
+    "Use"
+  ],
+  [
+    "main.py/FUNCTIONS/main (Function)",
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/get_assigned_station_id (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/get_assigned_station_id (Method)",
+    "tts/ticket_agent.py/CLASSES/TicketAgent/FIELDS/assigned_station_id (Field)",
+    "Use"
+  ],
+  [
+    "main.py/FUNCTIONS/main (Function)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "main.py/FUNCTIONS/main (Function)",
+    "tts/staff.py/CLASSES/Staff (Class)",
+    "Use"
+  ],
+  [
+    "tts/booking_service.py/CLASSES/BookingService/CONSTRUCTORS/__init__ (Constructor)",
+    "tts/passenger_repository.py/CLASSES/PassengerRepository (Class)",
+    "Use"
+  ],
+  [
+    "tts/booking_service.py/CLASSES/BookingService/CONSTRUCTORS/__init__ (Constructor)",
+    "tts/route_repository.py/CLASSES/RouteRepository (Class)",
+    "Use"
+  ],
+  [
+    "tts/booking_service.py/CLASSES/BookingService/CONSTRUCTORS/__init__ (Constructor)",
+    "tts/ticket_repository.py/CLASSES/TicketRepository (Class)",
+    "Use"
+  ],
+  [
+    "tts/booking_service.py/CLASSES/BookingService/CONSTRUCTORS/__init__ (Constructor)",
+    "tts/train_repository.py/CLASSES/TrainRepository (Class)",
+    "Use"
+  ],
+  [
+    "tts/booking_service.py/CLASSES/BookingService/CONSTRUCTORS/__init__ (Constructor)",
+    "tts/train_station_repository.py/CLASSES/TrainStationRepository (Class)",
+    "Use"
+  ],
+  [
+    "tts/booking_service.py/CLASSES/BookingService/METHODS/book_ticket (Method)",
+    "tts/ticket.py/CLASSES/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "tts/booking_service.py/CLASSES/BookingService/METHODS/get_passenger_tickets (Method)",
+    "tts/ticket.py/CLASSES/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "tts/passenger.py/CLASSES/Passenger/METHODS/display_info (Method)",
+    "tts/person.py/CLASSES/Person (Class)",
+    "Use"
+  ],
+  [
+    "tts/passenger_repository.py/CLASSES/PassengerRepository/METHODS/add_passenger (Method)",
+    "tts/passenger.py/CLASSES/Passenger (Class)",
+    "Use"
+  ],
+  [
+    "tts/passenger_repository.py/CLASSES/PassengerRepository/METHODS/get_all_passengers (Method)",
+    "tts/passenger.py/CLASSES/Passenger (Class)",
+    "Use"
+  ],
+  [
+    "tts/passenger_repository.py/CLASSES/PassengerRepository/METHODS/get_passenger (Method)",
+    "tts/passenger.py/CLASSES/Passenger (Class)",
+    "Use"
+  ],
+  [
+    "tts/route_repository.py/CLASSES/RouteRepository/METHODS/add_route (Method)",
+    "tts/route.py/CLASSES/Route (Class)",
+    "Use"
+  ],
+  [
+    "tts/route_repository.py/CLASSES/RouteRepository/METHODS/get_all_routes (Method)",
+    "tts/route.py/CLASSES/Route (Class)",
+    "Use"
+  ],
+  [
+    "tts/route_repository.py/CLASSES/RouteRepository/METHODS/get_route (Method)",
+    "tts/route.py/CLASSES/Route (Class)",
+    "Use"
+  ],
+  [
+    "tts/route_repository.py/CLASSES/RouteRepository/METHODS/get_routes_by_station (Method)",
+    "tts/route.py/CLASSES/Route (Class)",
+    "Use"
+  ],
+  [
+    "tts/station_manager.py/CLASSES/StationManager/METHODS/display_info (Method)",
+    "tts/staff.py/CLASSES/Staff (Class)",
+    "Use"
+  ],
+  [
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/display_info (Method)",
+    "tts/staff.py/CLASSES/Staff (Class)",
+    "Use"
+  ],
+  [
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/get_assigned_station_id (Method)",
+    "tts/staff.py/CLASSES/Staff (Class)",
+    "Use"
+  ],
+  [
+    "tts/ticket_repository.py/CLASSES/TicketRepository/METHODS/add_ticket (Method)",
+    "tts/ticket.py/CLASSES/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "tts/ticket_repository.py/CLASSES/TicketRepository/METHODS/get_all_tickets (Method)",
+    "tts/ticket.py/CLASSES/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "tts/ticket_repository.py/CLASSES/TicketRepository/METHODS/get_ticket (Method)",
+    "tts/ticket.py/CLASSES/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "tts/ticket_repository.py/CLASSES/TicketRepository/METHODS/get_tickets_by_passenger (Method)",
+    "tts/ticket.py/CLASSES/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_repository.py/CLASSES/TrainRepository/METHODS/add_train (Method)",
+    "tts/train.py/CLASSES/Train (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_repository.py/CLASSES/TrainRepository/METHODS/get_all_trains (Method)",
+    "tts/train.py/CLASSES/Train (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_repository.py/CLASSES/TrainRepository/METHODS/get_train (Method)",
+    "tts/train.py/CLASSES/Train (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_repository.py/CLASSES/TrainRepository/METHODS/get_trains_by_route (Method)",
+    "tts/train.py/CLASSES/Train (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_station_repository.py/CLASSES/TrainStationRepository/METHODS/add_station (Method)",
+    "tts/train_station.py/CLASSES/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_station_repository.py/CLASSES/TrainStationRepository/METHODS/find_by_name (Method)",
+    "tts/train_station.py/CLASSES/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_station_repository.py/CLASSES/TrainStationRepository/METHODS/get_all_stations (Method)",
+    "tts/train_station.py/CLASSES/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_station_repository.py/CLASSES/TrainStationRepository/METHODS/get_station (Method)",
+    "tts/train_station.py/CLASSES/TrainStation (Class)",
+    "Use"
   ]
 ]
