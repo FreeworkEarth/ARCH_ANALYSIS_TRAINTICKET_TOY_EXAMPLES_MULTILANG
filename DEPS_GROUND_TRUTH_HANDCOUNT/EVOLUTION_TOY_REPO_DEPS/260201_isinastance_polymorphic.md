@@ -5,6 +5,24 @@ Repo: ARCH_ANALYSIS_TRAINTICKET_TOY_EXAMPLES_MULTILANG
 Scope: add minimal instanceof/isinstance + polymorphic call examples, update ground-truth handcounts, and verify with NeoDepends comparison runner.
 
 ---
+Implemented the TOY examples + updated handcounts, then re‑ran the full regression. The isinstance + polymorphic cases are now detected and reflected in DV8, and TOY now matches again.
+
+What changed in TOY
+
+Added polymorphic examples (isinstance + subclass method call) in:
+Python first/second main.py
+Java first/second Main.java
+Added get_assigned_station_id() to Python refactored TicketAgent
+Updated handcount edges to include:
+Method→Class Use (for isinstance)
+New subclass method calls
+Java cast‑based call + create in refactored main
+Test result summary (latest run)
+
+toy_python_first: missing=0 extra=0 diff=0.0% OK
+toy_python_second: missing=0 extra=0 diff=0.0% OK
+toy_java_first: missing=3 extra=0 diff=0.9% OK
+toy_java_second: missing=3 extra=0 diff=0.9% OK
 
 ## Summary
 
