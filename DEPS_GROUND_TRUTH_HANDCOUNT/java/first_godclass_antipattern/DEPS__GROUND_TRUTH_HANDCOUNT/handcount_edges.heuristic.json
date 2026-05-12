@@ -2315,12 +2315,17 @@
     "Use"
   ],
   [
+    "TTS/Route.java/Route/fields/destination (Field)",
+    "TTS/TrainStation.java/TrainStation (Class)",
+    "Use"
+  ],
+  [
     "TTS/Route.java/Route/fields/origin (Field)",
     "TTS/TrainStation.java/TrainStation (Class)",
     "Use"
   ],
   [
-    "TTS/Route.java/Route/fields/destination (Field)",
+    "TTS/StationManager.java/StationManager/fields/managedStation (Field)",
     "TTS/TrainStation.java/TrainStation (Class)",
     "Use"
   ],
@@ -2341,11 +2346,6 @@
   ],
   [
     "TTS/TicketAgent.java/TicketAgent/fields/assignedStation (Field)",
-    "TTS/TrainStation.java/TrainStation (Class)",
-    "Use"
-  ],
-  [
-    "TTS/StationManager.java/StationManager/fields/managedStation (Field)",
     "TTS/TrainStation.java/TrainStation (Class)",
     "Use"
   ]

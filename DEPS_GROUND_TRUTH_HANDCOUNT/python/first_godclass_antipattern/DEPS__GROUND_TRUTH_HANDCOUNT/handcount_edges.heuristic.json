@@ -1410,24 +1410,9 @@
     "Use"
   ],
   [
-    "tts/ticket.py/CLASSES/Ticket/METHODS/display_ticket (Method)",
-    "tts/passenger.py/CLASSES/Passenger/METHODS/display_info (Method)",
-    "Call"
-  ],
-  [
-    "tts/ticket.py/CLASSES/Ticket/METHODS/display_ticket (Method)",
-    "tts/person.py/CLASSES/Person/FIELDS/name (Field)",
-    "Use"
-  ],
-  [
     "tts/ticket.py/CLASSES/Ticket/FIELDS/route (Field)",
     "tts/route.py/CLASSES/Route (Class)",
     "Use"
-  ],
-  [
-    "tts/ticket.py/CLASSES/Ticket/METHODS/display_ticket (Method)",
-    "tts/route.py/CLASSES/Route/METHODS/get_route_id (Method)",
-    "Call"
   ],
   [
     "tts/ticket.py/CLASSES/Ticket/FIELDS/train (Field)",
@@ -1445,29 +1430,9 @@
     "Call"
   ],
   [
-    "tts/ticket.py/CLASSES/Ticket/METHODS/display_ticket (Method)",
-    "tts/train_station.py/CLASSES/TrainStation/METHODS/get_name (Method)",
-    "Call"
-  ],
-  [
     "tts/train.py/CLASSES/Train/FIELDS/route (Field)",
     "tts/route.py/CLASSES/Route (Class)",
     "Use"
-  ],
-  [
-    "tts/train.py/CLASSES/Train/METHODS/get_route (Method)",
-    "tts/route.py/CLASSES/Route (Class)",
-    "Use"
-  ],
-  [
-    "tts/train.py/CLASSES/Train/METHODS/display_info (Method)",
-    "tts/route.py/CLASSES/Route/METHODS/get_route_id (Method)",
-    "Call"
-  ],
-  [
-    "tts/train_station.py/CLASSES/TrainStation/METHODS/search_trains (Method)",
-    "tts/route.py/CLASSES/Route/METHODS/get_destination (Method)",
-    "Call"
   ],
   [
     "tts/train_station.py/CLASSES/TrainStation/FIELDS/available_trains (Field)",
@@ -1475,39 +1440,9 @@
     "Use"
   ],
   [
-    "tts/train_station.py/CLASSES/TrainStation/METHODS/add_train (Method)",
-    "tts/train.py/CLASSES/Train/METHODS/get_train_number (Method)",
-    "Call"
-  ],
-  [
-    "tts/train_station.py/CLASSES/TrainStation/METHODS/search_trains (Method)",
-    "tts/train.py/CLASSES/Train/METHODS/get_route (Method)",
-    "Call"
-  ],
-  [
-    "tts/route.py/CLASSES/Route/FIELDS/origin (Field)",
-    "tts/train_station.py/CLASSES/TrainStation (Class)",
-    "Use"
-  ],
-  [
-    "tts/route.py/CLASSES/Route/FIELDS/destination (Field)",
-    "tts/train_station.py/CLASSES/TrainStation (Class)",
-    "Use"
-  ],
-  [
-    "tts/route.py/CLASSES/Route/METHODS/display_info (Method)",
-    "tts/train_station.py/CLASSES/TrainStation/METHODS/get_name (Method)",
-    "Call"
-  ],
-  [
     "tts/station_manager.py/CLASSES/StationManager/FIELDS/managed_station (Field)",
     "tts/train_station.py/CLASSES/TrainStation (Class)",
     "Use"
-  ],
-  [
-    "tts/station_manager.py/CLASSES/StationManager/METHODS/display_info (Method)",
-    "tts/train_station.py/CLASSES/TrainStation/METHODS/get_name (Method)",
-    "Call"
   ],
   [
     "tts/ticket_agent.py/CLASSES/TicketAgent/FIELDS/assigned_station (Field)",
@@ -1515,24 +1450,9 @@
     "Use"
   ],
   [
-    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/display_info (Method)",
-    "tts/train_station.py/CLASSES/TrainStation/METHODS/get_name (Method)",
-    "Call"
-  ],
-  [
     "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/FIELDS/routes (Field)",
     "tts/route.py/CLASSES/Route (Class)",
     "Use"
-  ],
-  [
-    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/find_routes (Method)",
-    "tts/route.py/CLASSES/Route/METHODS/get_origin (Method)",
-    "Call"
-  ],
-  [
-    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/find_routes (Method)",
-    "tts/route.py/CLASSES/Route/METHODS/get_destination (Method)",
-    "Call"
   ],
   [
     "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/FIELDS/trains (Field)",
@@ -1540,33 +1460,8 @@
     "Use"
   ],
   [
-    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/find_train (Method)",
-    "tts/train.py/CLASSES/Train/METHODS/get_train_number (Method)",
-    "Call"
-  ],
-  [
-    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/get_total_capacity (Method)",
-    "tts/train.py/CLASSES/Train/METHODS/get_total_seats (Method)",
-    "Call"
-  ],
-  [
-    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/search_available_trains (Method)",
-    "tts/train.py/CLASSES/Train/METHODS/get_route (Method)",
-    "Call"
-  ],
-  [
     "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/FIELDS/stations (Field)",
     "tts/train_station.py/CLASSES/TrainStation (Class)",
-    "Use"
-  ],
-  [
-    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/find_station (Method)",
-    "tts/train_station.py/CLASSES/TrainStation/METHODS/get_station_code (Method)",
-    "Call"
-  ],
-  [
-    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/display_system_stats (Method)",
-    "tts/person.py/CLASSES/Person/FIELDS/name (Field)",
     "Use"
   ],
   [
@@ -1633,5 +1528,110 @@
     "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/display_system_stats (Method)",
     "tts/base_management_system.py/CLASSES/BaseManagementSystem/METHODS/display_system_stats (Method)",
     "Override"
+  ],
+  [
+    "tts/route.py/CLASSES/Route/FIELDS/destination (Field)",
+    "tts/train_station.py/CLASSES/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "tts/route.py/CLASSES/Route/FIELDS/origin (Field)",
+    "tts/train_station.py/CLASSES/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "tts/route.py/CLASSES/Route/METHODS/display_info (Method)",
+    "tts/train_station.py/CLASSES/TrainStation/METHODS/get_name (Method)",
+    "Call"
+  ],
+  [
+    "tts/station_manager.py/CLASSES/StationManager/METHODS/display_info (Method)",
+    "tts/train_station.py/CLASSES/TrainStation/METHODS/get_name (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket.py/CLASSES/Ticket/METHODS/display_ticket (Method)",
+    "tts/passenger.py/CLASSES/Passenger/METHODS/display_info (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket.py/CLASSES/Ticket/METHODS/display_ticket (Method)",
+    "tts/person.py/CLASSES/Person/FIELDS/name (Field)",
+    "Use"
+  ],
+  [
+    "tts/ticket.py/CLASSES/Ticket/METHODS/display_ticket (Method)",
+    "tts/route.py/CLASSES/Route/METHODS/get_route_id (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket.py/CLASSES/Ticket/METHODS/display_ticket (Method)",
+    "tts/train_station.py/CLASSES/TrainStation/METHODS/get_name (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket_agent.py/CLASSES/TicketAgent/METHODS/display_info (Method)",
+    "tts/train_station.py/CLASSES/TrainStation/METHODS/get_name (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/display_system_stats (Method)",
+    "tts/person.py/CLASSES/Person/FIELDS/name (Field)",
+    "Use"
+  ],
+  [
+    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/find_routes (Method)",
+    "tts/route.py/CLASSES/Route/METHODS/get_destination (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/find_routes (Method)",
+    "tts/route.py/CLASSES/Route/METHODS/get_origin (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/find_station (Method)",
+    "tts/train_station.py/CLASSES/TrainStation/METHODS/get_station_code (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/find_train (Method)",
+    "tts/train.py/CLASSES/Train/METHODS/get_train_number (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/get_total_capacity (Method)",
+    "tts/train.py/CLASSES/Train/METHODS/get_total_seats (Method)",
+    "Call"
+  ],
+  [
+    "tts/ticket_booking_system.py/CLASSES/TicketBookingSystem/METHODS/search_available_trains (Method)",
+    "tts/train.py/CLASSES/Train/METHODS/get_route (Method)",
+    "Call"
+  ],
+  [
+    "tts/train.py/CLASSES/Train/METHODS/display_info (Method)",
+    "tts/route.py/CLASSES/Route/METHODS/get_route_id (Method)",
+    "Call"
+  ],
+  [
+    "tts/train.py/CLASSES/Train/METHODS/get_route (Method)",
+    "tts/route.py/CLASSES/Route (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_station.py/CLASSES/TrainStation/METHODS/add_train (Method)",
+    "tts/train.py/CLASSES/Train/METHODS/get_train_number (Method)",
+    "Call"
+  ],
+  [
+    "tts/train_station.py/CLASSES/TrainStation/METHODS/search_trains (Method)",
+    "tts/route.py/CLASSES/Route/METHODS/get_destination (Method)",
+    "Call"
+  ],
+  [
+    "tts/train_station.py/CLASSES/TrainStation/METHODS/search_trains (Method)",
+    "tts/train.py/CLASSES/Train/METHODS/get_route (Method)",
+    "Call"
   ]
 ]

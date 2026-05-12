@@ -2135,8 +2135,8 @@
     "Cast"
   ],
   [
-    "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
-    "TTS/TrainRepository.java/TrainRepository (Class)",
+    "TTS/BookingService.java/BookingService/fields/passengerRepo (Field)",
+    "TTS/PassengerRepository.java/PassengerRepository (Class)",
     "Use"
   ],
   [
@@ -2145,18 +2145,18 @@
     "Use"
   ],
   [
+    "TTS/BookingService.java/BookingService/fields/stationRepo (Field)",
+    "TTS/TrainStationRepository.java/TrainStationRepository (Class)",
+    "Use"
+  ],
+  [
     "TTS/BookingService.java/BookingService/fields/ticketRepo (Field)",
     "TTS/TicketRepository.java/TicketRepository (Class)",
     "Use"
   ],
   [
-    "TTS/BookingService.java/BookingService/fields/passengerRepo (Field)",
-    "TTS/PassengerRepository.java/PassengerRepository (Class)",
-    "Use"
-  ],
-  [
-    "TTS/BookingService.java/BookingService/fields/stationRepo (Field)",
-    "TTS/TrainStationRepository.java/TrainStationRepository (Class)",
+    "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
+    "TTS/TrainRepository.java/TrainRepository (Class)",
     "Use"
   ]
 ]
