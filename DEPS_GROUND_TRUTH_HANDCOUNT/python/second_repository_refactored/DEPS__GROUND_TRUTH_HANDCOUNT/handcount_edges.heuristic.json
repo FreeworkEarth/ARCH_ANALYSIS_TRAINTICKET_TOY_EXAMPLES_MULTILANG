@@ -1333,5 +1333,30 @@
     "tts/train_station_repository.py/CLASSES/TrainStationRepository/METHODS/get_station (Method)",
     "tts/train_station.py/CLASSES/TrainStation (Class)",
     "Use"
+  ],
+  [
+    "tts/passenger_repository.py/CLASSES/PassengerRepository/FIELDS/passengers (Field)",
+    "tts/passenger.py/CLASSES/Passenger (Class)",
+    "Use"
+  ],
+  [
+    "tts/route_repository.py/CLASSES/RouteRepository/FIELDS/routes (Field)",
+    "tts/route.py/CLASSES/Route (Class)",
+    "Use"
+  ],
+  [
+    "tts/ticket_repository.py/CLASSES/TicketRepository/FIELDS/tickets (Field)",
+    "tts/ticket.py/CLASSES/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_repository.py/CLASSES/TrainRepository/FIELDS/trains (Field)",
+    "tts/train.py/CLASSES/Train (Class)",
+    "Use"
+  ],
+  [
+    "tts/train_station_repository.py/CLASSES/TrainStationRepository/FIELDS/stations (Field)",
+    "tts/train_station.py/CLASSES/TrainStation (Class)",
+    "Use"
   ]
 ]

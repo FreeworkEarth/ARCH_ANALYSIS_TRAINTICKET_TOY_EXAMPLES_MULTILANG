@@ -2263,5 +2263,90 @@
     "TTS/Main.java/Main/methods/main (Method)",
     "TTS/TicketAgent.java/TicketAgent/self (Class)",
     "Cast"
+  ],
+  [
+    "TTS/Passenger.java/Passenger/fields/bookedTickets (Field)",
+    "TTS/Ticket.java/Ticket (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/fields/intermediateStops (Field)",
+    "TTS/TrainStation.java/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/fields/scheduledTrains (Field)",
+    "TTS/Train.java/Train (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TicketBookingSystem.java/TicketBookingSystem/fields/passengers (Field)",
+    "TTS/Passenger.java/Passenger (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TicketBookingSystem.java/TicketBookingSystem/fields/routes (Field)",
+    "TTS/Route.java/Route (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TicketBookingSystem.java/TicketBookingSystem/fields/staff (Field)",
+    "TTS/Staff.java/Staff (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TicketBookingSystem.java/TicketBookingSystem/fields/stations (Field)",
+    "TTS/TrainStation.java/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TicketBookingSystem.java/TicketBookingSystem/fields/trains (Field)",
+    "TTS/Train.java/Train (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/fields/agents (Field)",
+    "TTS/TicketAgent.java/TicketAgent (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TrainStation.java/TrainStation/fields/availableTrains (Field)",
+    "TTS/Train.java/Train (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/fields/origin (Field)",
+    "TTS/TrainStation.java/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Route.java/Route/fields/destination (Field)",
+    "TTS/TrainStation.java/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/fields/passenger (Field)",
+    "TTS/Passenger.java/Passenger (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/fields/route (Field)",
+    "TTS/Route.java/Route (Class)",
+    "Use"
+  ],
+  [
+    "TTS/Ticket.java/Ticket/fields/train (Field)",
+    "TTS/Train.java/Train (Class)",
+    "Use"
+  ],
+  [
+    "TTS/TicketAgent.java/TicketAgent/fields/assignedStation (Field)",
+    "TTS/TrainStation.java/TrainStation (Class)",
+    "Use"
+  ],
+  [
+    "TTS/StationManager.java/StationManager/fields/managedStation (Field)",
+    "TTS/TrainStation.java/TrainStation (Class)",
+    "Use"
   ]
 ]

@@ -2133,5 +2133,30 @@
     "TTS/Main.java/Main/methods/main (Method)",
     "TTS/TicketAgent.java/TicketAgent/self (Class)",
     "Cast"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/fields/trainRepo (Field)",
+    "TTS/TrainRepository.java/TrainRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/fields/routeRepo (Field)",
+    "TTS/RouteRepository.java/RouteRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/fields/ticketRepo (Field)",
+    "TTS/TicketRepository.java/TicketRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/fields/passengerRepo (Field)",
+    "TTS/PassengerRepository.java/PassengerRepository (Class)",
+    "Use"
+  ],
+  [
+    "TTS/BookingService.java/BookingService/fields/stationRepo (Field)",
+    "TTS/TrainStationRepository.java/TrainStationRepository (Class)",
+    "Use"
   ]
 ]
