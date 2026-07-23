@@ -3,6 +3,7 @@
   "name": "handcount (heuristic, file-level collapsed Use)",
   "variables": [
     "tts/booking_service.py",
+    "tts/logging.py",
     "tts/passenger.py",
     "tts/passenger_repository.py",
     "tts/person.py",
@@ -30,13 +31,6 @@
     },
     {
       "src": 0,
-      "dest": 1,
-      "values": {
-        "Use": 1.0
-      }
-    },
-    {
-      "src": 0,
       "dest": 2,
       "values": {
         "Use": 1.0
@@ -44,63 +38,49 @@
     },
     {
       "src": 0,
-      "dest": 6,
+      "dest": 3,
       "values": {
         "Use": 1.0
       }
     },
     {
       "src": 0,
-      "dest": 9,
+      "dest": 7,
+      "values": {
+        "Use": 1.0
+      }
+    },
+    {
+      "src": 0,
+      "dest": 10,
       "values": {
         "Use": 3.0
-      }
-    },
-    {
-      "src": 0,
-      "dest": 11,
-      "values": {
-        "Use": 1.0
       }
     },
     {
       "src": 0,
       "dest": 12,
       "values": {
-        "Use": 2.0
+        "Use": 1.0
       }
     },
     {
       "src": 0,
       "dest": 13,
       "values": {
+        "Use": 2.0
+      }
+    },
+    {
+      "src": 0,
+      "dest": 14,
+      "values": {
         "Use": 1.0
       }
     },
     {
       "src": 0,
-      "dest": 15,
-      "values": {
-        "Use": 1.0
-      }
-    },
-    {
-      "src": 1,
-      "dest": 1,
-      "values": {
-        "Use": 3.0
-      }
-    },
-    {
-      "src": 1,
-      "dest": 3,
-      "values": {
-        "Use": 7.0
-      }
-    },
-    {
-      "src": 2,
-      "dest": 1,
+      "dest": 16,
       "values": {
         "Use": 1.0
       }
@@ -109,7 +89,21 @@
       "src": 2,
       "dest": 2,
       "values": {
-        "Use": 4.0
+        "Use": 3.0
+      }
+    },
+    {
+      "src": 2,
+      "dest": 4,
+      "values": {
+        "Use": 7.0
+      }
+    },
+    {
+      "src": 3,
+      "dest": 2,
+      "values": {
+        "Use": 1.0
       }
     },
     {
@@ -121,42 +115,14 @@
     },
     {
       "src": 4,
-      "dest": 2,
-      "values": {
-        "Use": 1.0
-      }
-    },
-    {
-      "src": 4,
       "dest": 4,
       "values": {
-        "Use": 39.0
+        "Use": 4.0
       }
     },
     {
-      "src": 4,
-      "dest": 6,
-      "values": {
-        "Use": 1.0
-      }
-    },
-    {
-      "src": 4,
-      "dest": 11,
-      "values": {
-        "Use": 1.0
-      }
-    },
-    {
-      "src": 4,
-      "dest": 13,
-      "values": {
-        "Use": 1.0
-      }
-    },
-    {
-      "src": 4,
-      "dest": 15,
+      "src": 5,
+      "dest": 3,
       "values": {
         "Use": 1.0
       }
@@ -165,12 +131,33 @@
       "src": 5,
       "dest": 5,
       "values": {
-        "Use": 13.0
+        "Use": 39.0
       }
     },
     {
-      "src": 6,
-      "dest": 5,
+      "src": 5,
+      "dest": 7,
+      "values": {
+        "Use": 1.0
+      }
+    },
+    {
+      "src": 5,
+      "dest": 12,
+      "values": {
+        "Use": 1.0
+      }
+    },
+    {
+      "src": 5,
+      "dest": 14,
+      "values": {
+        "Use": 1.0
+      }
+    },
+    {
+      "src": 5,
+      "dest": 16,
       "values": {
         "Use": 1.0
       }
@@ -179,35 +166,28 @@
       "src": 6,
       "dest": 6,
       "values": {
-        "Use": 5.0
+        "Use": 13.0
       }
     },
     {
       "src": 7,
-      "dest": 3,
-      "values": {
-        "Use": 3.0
-      }
-    },
-    {
-      "src": 7,
-      "dest": 7,
-      "values": {
-        "Use": 2.0
-      }
-    },
-    {
-      "src": 8,
-      "dest": 3,
+      "dest": 6,
       "values": {
         "Use": 1.0
       }
     },
     {
-      "src": 8,
+      "src": 7,
       "dest": 7,
       "values": {
         "Use": 5.0
+      }
+    },
+    {
+      "src": 8,
+      "dest": 4,
+      "values": {
+        "Use": 3.0
       }
     },
     {
@@ -219,177 +199,205 @@
     },
     {
       "src": 9,
-      "dest": 9,
-      "values": {
-        "Use": 18.0
-      }
-    },
-    {
-      "src": 10,
-      "dest": 3,
+      "dest": 4,
       "values": {
         "Use": 1.0
       }
     },
     {
-      "src": 10,
-      "dest": 7,
+      "src": 9,
+      "dest": 8,
       "values": {
         "Use": 5.0
+      }
+    },
+    {
+      "src": 9,
+      "dest": 9,
+      "values": {
+        "Use": 2.0
       }
     },
     {
       "src": 10,
       "dest": 10,
       "values": {
-        "Use": 2.0
+        "Use": 18.0
       }
     },
     {
       "src": 11,
-      "dest": 9,
+      "dest": 4,
       "values": {
         "Use": 1.0
       }
     },
     {
       "src": 11,
-      "dest": 11,
+      "dest": 8,
       "values": {
         "Use": 5.0
+      }
+    },
+    {
+      "src": 11,
+      "dest": 11,
+      "values": {
+        "Use": 2.0
+      }
+    },
+    {
+      "src": 12,
+      "dest": 10,
+      "values": {
+        "Use": 1.0
       }
     },
     {
       "src": 12,
       "dest": 12,
       "values": {
-        "Use": 17.0
-      }
-    },
-    {
-      "src": 13,
-      "dest": 12,
-      "values": {
-        "Use": 1.0
+        "Use": 5.0
       }
     },
     {
       "src": 13,
       "dest": 13,
       "values": {
-        "Use": 5.0
+        "Use": 17.0
+      }
+    },
+    {
+      "src": 14,
+      "dest": 13,
+      "values": {
+        "Use": 1.0
       }
     },
     {
       "src": 14,
       "dest": 14,
       "values": {
-        "Use": 8.0
-      }
-    },
-    {
-      "src": 15,
-      "dest": 14,
-      "values": {
-        "Use": 1.0
+        "Use": 5.0
       }
     },
     {
       "src": 15,
       "dest": 15,
       "values": {
-        "Use": 5.0
+        "Use": 8.0
       }
     },
     {
       "src": 16,
+      "dest": 15,
+      "values": {
+        "Use": 1.0
+      }
+    },
+    {
+      "src": 16,
+      "dest": 16,
+      "values": {
+        "Use": 5.0
+      }
+    },
+    {
+      "src": 17,
       "dest": 0,
       "values": {
         "Use": 6.0
       }
     },
     {
-      "src": 16,
-      "dest": 1,
-      "values": {
-        "Use": 2.0
-      }
-    },
-    {
-      "src": 16,
+      "src": 17,
       "dest": 2,
       "values": {
+        "Use": 2.0
+      }
+    },
+    {
+      "src": 17,
+      "dest": 3,
+      "values": {
         "Use": 4.0
       }
     },
     {
-      "src": 16,
-      "dest": 4,
-      "values": {
-        "Use": 3.0
-      }
-    },
-    {
-      "src": 16,
+      "src": 17,
       "dest": 5,
       "values": {
+        "Use": 3.0
+      }
+    },
+    {
+      "src": 17,
+      "dest": 6,
+      "values": {
         "Use": 2.0
       }
     },
     {
-      "src": 16,
-      "dest": 6,
+      "src": 17,
+      "dest": 7,
       "values": {
         "Use": 4.0
       }
     },
     {
-      "src": 16,
-      "dest": 8,
+      "src": 17,
+      "dest": 9,
       "values": {
         "Use": 3.0
       }
     },
     {
-      "src": 16,
-      "dest": 10,
-      "values": {
-        "Use": 3.0
-      }
-    },
-    {
-      "src": 16,
+      "src": 17,
       "dest": 11,
       "values": {
-        "Use": 2.0
+        "Use": 3.0
       }
     },
     {
-      "src": 16,
+      "src": 17,
       "dest": 12,
       "values": {
         "Use": 2.0
       }
     },
     {
-      "src": 16,
+      "src": 17,
       "dest": 13,
-      "values": {
-        "Use": 4.0
-      }
-    },
-    {
-      "src": 16,
-      "dest": 14,
       "values": {
         "Use": 2.0
       }
     },
     {
-      "src": 16,
-      "dest": 15,
+      "src": 17,
+      "dest": 14,
       "values": {
         "Use": 4.0
+      }
+    },
+    {
+      "src": 17,
+      "dest": 15,
+      "values": {
+        "Use": 2.0
+      }
+    },
+    {
+      "src": 17,
+      "dest": 16,
+      "values": {
+        "Use": 4.0
+      }
+    },
+    {
+      "src": 5,
+      "dest": 1,
+      "values": {
+        "Use": 2.0
       }
     }
   ]

@@ -137,3 +137,18 @@ Examples:
 
 Prefer “don’t guess” over “overcount”.
 
+---
+
+## Stdlib-shadow import rule (important)
+
+`tts/logging.py` shadows the stdlib `logging` module. Python 3 uses absolute
+imports by default, so:
+
+- `import logging` in `booking_service.py` resolves to **stdlib** → NO internal
+  Import edge to `tts/logging.py` (this is a phantom that tools like
+  StackGraphs may incorrectly produce).
+- `from tts.logging import setup_logging` in `reporting_service.py` is a
+  **qualified** import → genuine internal Import edge to `tts/logging.py`.
+
+The handcount must NOT include `booking_service.py → tts/logging.py` as an edge.
+

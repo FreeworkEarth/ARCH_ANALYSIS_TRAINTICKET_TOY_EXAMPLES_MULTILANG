@@ -10,6 +10,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, Optional, Tuple
 
+from tts.logging import setup_logging
 from tts.passenger_repository import PassengerRepository
 from tts.route_repository import RouteRepository
 from tts.ticket_repository import TicketRepository
@@ -34,6 +35,7 @@ class ReportingService:
         self.passenger_repo = passenger_repo
         self.station_repo = station_repo
 
+        self._logger = setup_logging("reporting")
         self.reports: List[Tuple[str, Any]] = []
         self.metrics: Dict[str, Any] = {}
         self.cached_stats: Optional[Dict[str, Any]] = None

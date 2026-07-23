@@ -1358,5 +1358,20 @@
     "tts/train_station_repository.py/CLASSES/TrainStationRepository/FIELDS/stations (Field)",
     "tts/train_station.py/CLASSES/TrainStation (Class)",
     "Use"
+  ],
+  [
+    "tts/reporting_service.py/module (Module)",
+    "tts/logging.py/module (Module)",
+    "Import"
+  ],
+  [
+    "tts/reporting_service.py/CLASSES/ReportingService/CONSTRUCTORS/__init__ (Constructor)",
+    "tts/logging.py/FUNCTIONS/setup_logging (Function)",
+    "Call"
+  ],
+  [
+    "tts/reporting_service.py/CLASSES/ReportingService/CONSTRUCTORS/__init__ (Constructor)",
+    "tts/reporting_service.py/CLASSES/ReportingService/FIELDS/_logger (Field)",
+    "Use"
   ]
 ]

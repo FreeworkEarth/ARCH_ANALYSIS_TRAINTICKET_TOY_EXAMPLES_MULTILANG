@@ -3,8 +3,11 @@ NEW CLASS: Service layer for booking operations
 REPLACES the god class from FIRST version
 Uses repositories instead of managing entities directly
 """
+import logging
 from typing import List, Optional
 from datetime import datetime
+
+logger = logging.getLogger(__name__)
 from tts.train_repository import TrainRepository
 from tts.route_repository import RouteRepository
 from tts.ticket_repository import TicketRepository
